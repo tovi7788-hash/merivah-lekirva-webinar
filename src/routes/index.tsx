@@ -253,11 +253,11 @@ const takeaways = [
 ];
 
 const topics = [
-  ["האם יש מריבות בריאות?", "המתח הוא חלק טבעי מהזוגיות. נבין למה לא צריך לפחד ממחלוקות, למה חשוב להציב גבולות, ואיך מריבות שלא מטופלות עלולות להצטבר וליצור שבר."],
-  ["עקרון הפדלים", "הזוגיות היא מעגל שבו כל אחד משפיע על השני. לא תמיד השאלה היא מי צודק — אלא איך נוצר המעגל הזה, ואיך אפשר לשנות את התנועה בתוכו."],
-  ["המטרה: לשמוע ולהשמיע", "המריבה אינה תחרות שבה צריך לנצח. נלמד איך לבטא את הצרכים שלנו, ובו בזמן להבין מה בן או בת הזוג באמת מבקשים לומר."],
-  ["רמת המריבה הנכונה", "לא חלשים מדי ולא קיצוניים מדי. איך יודעים מתי להציב קו אדום, מתי להביע עמדה בעוצמה, ומתי לעצור ולבחור דרך אחרת."],
-  ["השיחה שמבארת ומבהירה", "איך עושים את זה בפועל? איך משמיעים, איך מקשיבים, ואיך מנהלים שיחה שאפשר לצאת ממנה עם יותר הבנה ופחות ריחוק."],
+  ["מריבה בריאה או מריבה הרסנית?", "מה ההבדל בין מחלוקת שאפשר לצמוח ממנה לבין מריבה שפוגעת בתקשורת ובקשר?"],
+  ["עקרון הפדלים", "איך התגובות של כל אחד מבני הזוג משפיעות על המשך המריבה, ולמה אנחנו חוזרים שוב לאותו מעגל?"],
+  ["לשמוע ולהשמיע", "איך מביעים צורך ומעבירים מסר בצורה ברורה, ואיך מקשיבים בלי להתגונן?"],
+  ["גבולות וקווים אדומים", "איך מזהים את הגבולות שחשוב לשמור עליהם ואיך מבטאים אותם בלי להחריף את העימות?"],
+  ["השיחה שמבררת ומבהירה", "איך עוברים מוויכוח על מה שקרה לשיחה שמאפשרת להבין מה באמת עומד מאחורי המחלוקת?"],
 ];
 
 const faqs = [
@@ -477,18 +477,32 @@ function Index() {
       {/* 5. איך לנהל אחרת */}
       <section className="px-5 py-20">
         <div className="mx-auto max-w-4xl">
-          <SectionTitle>לא רק על מה אתם רבים, אלא איך לנהל את זה אחרת</SectionTitle>
-          <div className="mt-12 space-y-5">
+          <SectionTitle>מה נלמד במפגש?</SectionTitle>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-lg text-brand-blue">
+            נבין מה קורה בזמן קונפליקט, ונכיר כלים מעשיים לניהול שיחה אחרת.
+          </p>
+          <ol className="relative mx-auto mt-12 max-w-3xl before:absolute before:inset-y-6 before:right-8 before:w-px before:bg-brand-pink sm:before:right-10">
             {topics.map(([t, d], i) => (
-              <div key={t} className="flex gap-5 rounded-3xl border border-border bg-card p-6 shadow-soft">
-                <NumberBadge n={i + 1} />
-                <div>
-                  <h3 className="text-xl font-extrabold">{t}</h3>
-                  <p className="mt-1">{d}</p>
+              <li key={t} className="relative grid grid-cols-[4rem_minmax(0,1fr)] gap-x-4 pb-10 last:pb-0 sm:grid-cols-[5rem_minmax(0,1fr)] sm:gap-x-7 sm:pb-12">
+                <div className="relative z-10 self-start bg-background py-2 text-center text-4xl font-light tabular-nums leading-none text-brand-blue sm:text-5xl">
+                  <span className="sr-only">שלב </span>{String(i + 1).padStart(2, "0")}
                 </div>
-              </div>
+                <div className="min-w-0 border-b border-brand-blue/15 pb-8 group-last:border-0">
+                  <svg aria-hidden="true" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mb-3 size-8 text-brand-blue">
+                    <path d={[
+                      "M5 24 12 17 19 21 27 8 M20 8h7v7",
+                      "M25 12a10 10 0 0 0-18-2 M7 5v5h5 M7 20a10 10 0 0 0 18 2 M25 27v-5h-5",
+                      "M4 7h17v12H11l-5 4v-4H4V7 M24 12h4v12h-3v4l-5-4h-5",
+                      "M8 5v22 M24 5v22 M13 16h6 M16 13v6",
+                      "M5 6h22v15H15l-7 6v-6H5V6 M10 11h12 M10 16h8",
+                    ][i]} />
+                  </svg>
+                  <h3 className="text-xl font-extrabold leading-snug text-brand-blue sm:text-2xl">{t}</h3>
+                  <p className="mt-3 max-w-xl text-lg leading-relaxed">{d}</p>
+                </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
