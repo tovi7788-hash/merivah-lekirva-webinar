@@ -261,12 +261,12 @@ const topics = [
 ];
 
 const faqs = [
-  ["בן/בת הזוג שלי לא יבוא/תבוא", "מגיעים ביחד? זה כפול. מגיע או מגיעה לבד? זו כבר התחלה אמיתית. גם כשמגיעים לבד אפשר ללמוד לזהות את הדינמיקה הזוגית."],
-  ["זה בזום, זה לא יעזור כמו פגישה פרונטלית", "המפגש מתקיים מהבית, בסביבה הנוחה והמוכרת שלכם, בלי נסיעות."],
-  ["איך אפשר לשאול שאלות? האם ישמעו אותי?", "במהלך המפגש תוכלו לשלוח שאלות בכתב דרך אזור השאלות והתשובות של Zoom. השאלות נשלחות ליובל בלבד, באופן אנונימי, ללא הצגת שמכם למשתתפים האחרים."],
-  ["אין לי זמן, 90 דקות זה הרבה", "זו אחת השעה וחצי המשמעותיות ביותר שתשקיעו החודש בזוגיות שלכם."],
-  ["ניסינו כבר הכול, שום דבר לא עזר", "לפעמים אנחנו מנסים שוב ושוב לפתור את הנושא שעליו אנחנו רבים, אבל לא מזהים את המעגל שחוזר על עצמו."],
-  ["האם המפגש מתאים גם למי שאין לו משבר זוגי?", "בהחלט. המפגש מתאים גם לזוגות שרוצים לחזק את הקשר."],
+  ["מה אם בן או בת הזוג לא רוצים להשתתף?", "בהחלט אפשר להצטרף גם לבד. במהלך המפגש תוכלו ללמוד לזהות את דפוסי התקשורת והתגובות בתוך הקשר, ולקבל כלים שתוכלו להתחיל ליישם בעצמכם. מומלץ להגיע יחד, אבל אין בכך תנאי להשתתפות."],
+  ["האם המפגש מתקיים בזום או פנים אל פנים?", "המפגש מתקיים בשידור חי בזום, כך שתוכלו להשתתף מהבית, בלי צורך להגיע למקום פיזי."],
+  ["האם אפשר לשאול שאלות באופן אנונימי?", "השאלות יועברו בכתב, בהתאם למנגנון השאלות שיופעל במפגש. כך תוכלו להעלות נושא שמעסיק אתכם בלי צורך לדבר מול המשתתפים."],
+  ["האם 90 דקות אינן זמן ארוך מדי?", "90 דקות שמוקדשות להבנת הדרך שבה אתם מנהלים מחלוקות, לזיהוי דפוסים ולהיכרות עם כלים מעשיים. המטרה היא לצאת מהמפגש עם הבנה וכלים שאפשר לקחת לחיי היומיום."],
+  ["מה אם כבר ניסינו הכול?", "לפעמים אנחנו מנסים שוב ושוב לפתור את הנושא שעליו אנחנו רבים, בלי לזהות את הדפוס שמחזיר אותנו לאותה נקודה. במפגש נלמד להתבונן גם על הדרך שבה המריבה מתנהלת, ולא רק על הסיבה שבגללה התחילה."],
+  ["האם המפגש מתאים גם למי שלא נמצא במשבר זוגי?", "בהחלט. המפגש מיועד גם לזוגות שרוצים לשפר את הדרך שבה הם מנהלים מחלוקות, להבין טוב יותר זה את זו ולרכוש כלים לתקשורת בריאה יותר – גם כשאין משבר משמעותי."],
 ];
 
 function Index() {
@@ -606,12 +606,12 @@ function Index() {
           <SectionTitle>שאלות שעולות לפני שנרשמים</SectionTitle>
           <div className="mt-10 space-y-3">
             {faqs.map(([q, a]) => (
-              <details key={q} className="group rounded-2xl bg-card px-6 py-4 shadow-soft">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-brand-blue">
+              <details key={q} className="group rounded-2xl bg-card px-5 py-4 shadow-soft [interpolate-size:allow-keywords] [&::details-content]:h-0 [&::details-content]:overflow-hidden [&::details-content]:opacity-0 [&::details-content]:transition-[height,opacity,content-visibility] [&::details-content]:duration-300 [&::details-content]:ease-in-out [&::details-content]:[transition-behavior:allow-discrete] [&[open]::details-content]:h-auto [&[open]::details-content]:opacity-100 motion-reduce:[&::details-content]:transition-none sm:px-6">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-sm text-lg font-bold leading-snug text-brand-blue focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring">
                   {q}
-                  <span className="text-2xl transition-transform group-open:rotate-45">+</span>
+                  <span aria-hidden="true" className="flex size-7 shrink-0 items-center justify-center text-2xl transition-transform duration-300 group-open:rotate-45 motion-reduce:transition-none">+</span>
                 </summary>
-                <p className="mt-3">{a}</p>
+                <p className="pt-4 leading-relaxed">{a}</p>
               </details>
             ))}
           </div>
