@@ -321,14 +321,14 @@ function Index() {
             </span>
           </h1>
           <p className="mx-auto mb-[20px] max-w-xl text-balance text-[22px] font-semibold leading-[1.35] sm:mb-[26px] sm:text-[27px]">
-            איך להפוך את הריחוק בבית לחיבור אמיתי?
+            איך להפוך מריבה להזדמנות לחיזוק הקשר?
           </p>
           <div className="mx-auto max-w-[650px]">
             <blockquote className="mx-auto mb-[18px] max-w-[625px] text-[17px] font-normal leading-[1.5] text-foreground sm:text-[19px]">
-              "איך יכול להיות ששניכם רוצים שיהיה טוב בבית, שניכם משתדלים... ובסוף שוב מוצאים את עצמכם באותו ויכוח?"
+              "שניכם רוצים שיהיה טוב בבית, שניכם משתדלים, ובכל זאת לפעמים ויכוח קטן הופך למריבה ארוכה שמשאירה את שניכם מתוסכלים."
             </blockquote>
             <p className="mb-[20px] text-[16px] font-semibold leading-[1.55] sm:mb-[24px] sm:text-[18px]">
-              ב־90 דקות תלמדו לנהל את הריבים אחרת: להעביר את מה שחשוב לכם בלי לשרוט, ולהקשיב בלי להתגונן. כי כשיודעים לנהל קונפליקט נכון, גם הריבים יכולים להפוך להזדמנות לבנות קשר חזק יותר, עם אמון, קרבה ואהבה עמוקה. תלמדו להבחין בין מריבה בריאה שמקרבת, לבין מריבה שפוגעת — ואיך לשמור על הגבול הזה בכל ויכוח.
+              ב-90 דקות תלמדו איך להפחית את עוצמת המריבות ואת משכן, להציב גבולות ולשמור על קווים אדומים, להבין ולהעביר מסרים בצורה נכונה – ולהפוך גם רגעים של מחלוקת להזדמנות לצמיחה ולחיזוק הקשר.
             </p>
           </div>
           <div className="flex justify-center">
@@ -346,7 +346,7 @@ function Index() {
       <section className="px-5 pb-16 text-center">
         <div className="mx-auto max-w-2xl">
           <p className="mx-auto inline-block max-w-xl rounded-2xl border border-brand-pink px-5 py-3 font-semibold text-brand-blue">
-            💎 השידור היחיד ששני בני הזוג יכולים להשתתף בו ולתרגל בזמן אמת — בדיסקרטיות מוחלטת!
+            💎 מפגש ששני בני הזוג יכולים להשתתף בו ולתרגל יחד בזמן אמת — בדיסקרטיות מוחלטת
           </p>
         </div>
       </section>
