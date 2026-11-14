@@ -246,10 +246,10 @@ function NumberBadge({ n }: { n: number }) {
 }
 
 const takeaways = [
-  ["לעצור את המריבה באמצע — בלי לשרוט ובלי לוותר על מה שחשוב לך", "שלא תשרטו, אבל עדיין תעבירו את המסר."],
-  ["להבין למה אותה מריבה חוזרת שוב ושוב — דרך עקרון הפדלים", "בלי להתרגש כל כך מתגובות מסוימות של בן או בת הזוג, וללמוד לבחור תגובה אחרת."],
-  ["להציב גבול בלי שזה יהפוך לקרב - בלי גערות ובלי ויתור שקט", "מתוך כבוד לשניכם, לא מתוך כעס או ויתור."],
-  ["לזהות מה חסר בקשר, ולא רק על מה רבים - עם שיטת המפה הזוגית שיובל פיתח", "לזהות את החוסר שגורם למריבות, ואיפה בדיוק נמצא החיבור."],
+  ["להפחית את עוצמת המריבות ולדעת איפה לעצור.", "לדעת מתי להציב קו אדום, בלי להחריף את העימות."],
+  ["לא להגיע שוב ושוב לאותה נקודת רתיחה.", "בלי להתרגש כל כך מתגובות מסוימות של בן או בת הזוג, וללמוד לבחור תגובה אחרת."],
+  ["להביע את עצמכם ולהרגיש שמבינים אתכם.", "לדעת להעביר את מה שחשוב לכם, ולהרגיש שבאמת מקשיבים לכם."],
+  ["להפוך מחלוקת להזדמנות להתקדמות ולחיזוק הקשר.", "מתוך הבנה טובה יותר של הצד השני, לא מתוך כעס או ויתור."],
 ];
 
 const topics = [
@@ -457,19 +457,50 @@ function Index() {
       </section>
 
       {/* 4. ארבעה דברים */}
-      <section className="bg-muted px-5 py-20">
+      <section className="bg-brand-cream px-5 py-20">
         <div className="mx-auto max-w-5xl">
           <SectionTitle>ארבעה דברים שתיקחו איתכם כבר באותו ערב</SectionTitle>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2">
-            {takeaways.map(([t, d], i) => (
-              <div key={t} className="flex gap-5 rounded-3xl bg-card p-6 shadow-soft">
-                <NumberBadge n={i + 1} />
-                <div>
-                  <h3 className="text-xl font-extrabold">{t}</h3>
-                  <p className="mt-1">{d}</p>
+          <div className="mt-12">
+            <div className="mb-5 flex items-center gap-3 text-brand-blue-deep">
+              <svg aria-hidden="true" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="size-8 shrink-0">
+                <path d="M5 7h6M5 13h10M5 19h14M23 5v22m-5-5 5 5 5-5" />
+              </svg>
+              <h3 className="text-lg font-bold">קודם: מורידים עוצמה</h3>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {takeaways.slice(0, 2).map(([t, d], i) => (
+                <article key={t} className="flex gap-4 rounded-lg border-s-4 border-brand-pink bg-brand-blue-deep p-5 text-on-dark sm:p-6">
+                  <span className="shrink-0 text-2xl font-light tabular-nums text-brand-pink" aria-hidden="true">0{i + 1}</span>
+                  <div className="min-w-0">
+                    <h3 className="text-xl font-extrabold leading-snug text-on-dark">{t}</h3>
+                    <p className="mt-2 text-on-dark/90">{d}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div aria-hidden="true" className="flex h-20 items-center justify-center text-brand-blue/50 sm:h-24">
+              <svg viewBox="0 0 32 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-12 w-8">
+                <path d="M16 2v36m-7-7 7 7 7-7" />
+              </svg>
+            </div>
+            <div className="mb-6 flex items-center gap-3 text-brand-blue">
+              <svg aria-hidden="true" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="size-8 shrink-0">
+                <path d="M4 6h16v12h-7l-6 5v-5H4V6M24 11h4v13h-4v4l-6-4h-5M11 11h3M7 14h9" />
+              </svg>
+              <h3 className="text-lg font-bold">אחר כך: בונים מזה משהו טוב</h3>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 sm:gap-8">
+              {takeaways.slice(2).map(([t, d], i) => (
+                <article key={t} className="rounded-lg border border-brand-pink bg-brand-pink-soft p-7 sm:p-8">
+                  <div className="mb-5 flex items-center gap-3">
+                    <span className="text-2xl font-light tabular-nums text-brand-blue" aria-hidden="true">0{i + 3}</span>
+                    <span className="h-px flex-1 bg-brand-pink" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-extrabold leading-snug text-brand-blue">{t}</h3>
+                  <p className="mt-3 text-brand-ink">{d}</p>
+                </article>
+              ))}
                 </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
