@@ -508,13 +508,17 @@ function Index() {
 
       {/* 6. יובל */}
       <section className="bg-muted px-5 py-20">
-        <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-[1fr_1.4fr]">
+        <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[1fr_1.2fr] md:gap-12">
           <div className="text-center">
-            <div className="organic-frame mx-auto flex aspect-square w-64 items-center justify-center overflow-hidden border-[10px] border-card bg-input shadow-card sm:w-80">
+            <div className="organic-frame mx-auto flex aspect-square w-full max-w-96 items-center justify-center overflow-hidden border-[10px] border-card bg-input shadow-card">
               <img src={yuvalPhoto.url} alt="יובל סודאי מוסר סדנה" className="h-full w-full object-cover" />
             </div>
-            <ul className="mt-6 flex flex-wrap justify-center gap-2">
-              {["CBT", "IFS", "EFT", "המפה הזוגית", "16 שנות ניסיון"].map((c) => (
+            <div className="mx-auto mt-7 flex w-fit items-center gap-4 text-brand-blue">
+              <span className="text-7xl font-light tabular-nums leading-none">16</span>
+              <span className="border-s-2 border-brand-pink ps-4 text-xl font-bold">שנות ניסיון</span>
+            </div>
+            <ul className="mt-5 flex flex-wrap justify-center gap-2">
+              {["CBT", "IFS", "EFT", "המפה הזוגית"].map((c) => (
                 <li key={c} className="rounded-full bg-brand-sage px-3.5 py-1 text-sm font-bold text-brand-blue">
                   {c}
                 </li>
@@ -522,18 +526,19 @@ function Index() {
             </ul>
           </div>
           <div>
-            <Eyebrow>פסיכותרפיסט (CBT, IFS) ומטפל זוגי מוסמך (EFT, המפה הזוגית)</Eyebrow>
-            <h2 className="font-display-tight text-5xl sm:text-6xl">יובל ושיטת המפה הזוגית</h2>
+            <h2 className="font-display-tight text-5xl sm:text-6xl">16 שנה של הבנת מה באמת קורה בין בני זוג – ומה אפשר לעשות אחרת</h2>
             <div className="mt-5 space-y-4 text-lg">
-              <h3 className="text-xl font-extrabold">16 שנות ניסיון בהבנת מה שבאמת קורה בין בני זוג</h3>
               <p>
-                יובל סודאי מלווה זוגות כבר 16 שנה, ומתמחה בזיהוי שורש הקושי הזוגי – לא רק במה שרואים על פני השטח, אלא במה שבאמת מניע את הדברים.
+                יובל סודאי הוא פסיכותרפיסט ויועץ זוגי מוסמך, המלווה זוגות כבר 16 שנה.
               </p>
               <p>
-                במהלך השנים, בעבודה עם מאות זוגות בקליניקה, בסדנאות ובייעוץ זוגי, יובל זיהה שוב ושוב כיצד זוגות שונים מתמודדים עם דפוסים דומים: אותם חיכוכים, אותן אי-הבנות ואותם מעגלים שחוזרים על עצמם, גם כששני בני הזוג באמת רוצים בטובתו של הקשר.
+                לאורך השנים ליווה מאות זוגות וסייע להם להבין את הדפוסים שמנהלים את השיחות, את נקודות החיכוך ואת מה שמסתתר לעיתים מאחורי הוויכוח הגלוי.
               </p>
               <p>
-                מתוך הניסיון הזה נולדה שיטת המפה הזוגית – דרך מובנית להבין מה מתרחש מתחת לפני השטח בקשר, לזהות את הדפוסים שמעצבים אותו ולגלות מה יכול לעזור לשני בני הזוג להתקרב ולהבין זה את זו טוב יותר.
+                הגישה המקצועית של יובל מתמקדת לא רק במה שקורה בין בני הזוג, אלא גם בשאלה למה זה קורה – ואיך אפשר ליצור דרך אחרת להתמודדות.
+              </p>
+              <p>
+                מתוך הניסיון המקצועי הזה פיתח את שיטת 'המפה הזוגית', שמסייעת להבין את המרחב האישי והמשותף בתוך הקשר.
               </p>
             </div>
             <div className="mt-8">
