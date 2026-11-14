@@ -412,13 +412,43 @@ function Index() {
         <div className="mx-auto max-w-4xl rounded-[32px] bg-brand-blue px-6 py-14 text-center text-on-dark shadow-card sm:px-14">
           <Flower size={40} variant="light" className="mx-auto" />
           <h2 className="font-display-tight mt-3 text-5xl text-on-dark sm:text-6xl">
-            בדיוק בשביל זה בנינו את המפגש הזה
+            כדי לנהל מריבה אחרת, צריך להבין קודם מה באמת קורה בתוכה.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-on-dark/90">
-            יובל ייקח אתכם צעד אחר צעד אל השורש האמיתי של החיכוכים החוזרים — ויראה
-            לכם בדיוק איפה עובר הגבול הבריא בין מה ששייך לך, מה ששייך לבן או בת הזוג, ומה ששייך
-            ל"ממלכה המשותפת" שלכם. לא עוד תיאוריה —{" "}
-            <strong className="text-brand-pink">שיטה שאפשר להתחיל להשתמש בה כבר במריבה הבאה.</strong>
+            לא כל מחלוקת מתחילה במקום שבו היא נראית. לפעמים הוויכוח הוא רק הביטוי החיצוני לצורך שלא קיבל מקום, לגבול שלא הובן או לציפייה שלא נאמרה.
+          </p>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-on-dark/90">
+            במפגש יובל יכיר לכם דרך להתבונן על המרחב הזוגי ולהבין מה שייך לכל אחד מכם, מה דורש תיאום ומה קורה במרחב המשותף.
+          </p>
+          <div className="relative isolate mx-auto mt-10 grid max-w-3xl grid-cols-1 items-center gap-6 md:grid-cols-3 md:gap-3">
+            <div aria-hidden="true" className="absolute inset-y-6 left-1/2 -z-10 w-px -translate-x-1/2 bg-brand-pink/60 md:inset-x-6 md:inset-y-auto md:top-1/2 md:h-px md:w-auto md:translate-x-0" />
+            <div className="relative rounded-lg border border-brand-pink/60 bg-linear-to-br from-brand-blue to-brand-blue-deep px-4 py-6 shadow-soft md:py-8">
+              <span aria-hidden="true" className="mx-auto mb-4 block size-8 rounded-full border border-brand-pink bg-brand-pink/15" />
+              <h3 className="text-xl font-bold text-on-dark">המרחב שלי</h3>
+              <p className="mt-3 text-base leading-relaxed text-on-dark/90">
+                מה ששייך לי: התחושות, הצרכים והגבולות שלי בקשר.
+              </p>
+            </div>
+            <div className="relative rounded-lg border border-brand-pink bg-linear-to-br from-brand-cream to-brand-pink px-4 py-8 text-brand-blue-deep shadow-card ring-4 ring-brand-cream/10 md:py-10">
+              <span aria-hidden="true" className="relative mx-auto mb-4 block h-8 w-12">
+                <span className="absolute right-0 top-0 size-8 rounded-full border border-brand-blue bg-brand-blue/10" />
+                <span className="absolute left-0 top-0 size-8 rounded-full border border-brand-blue bg-brand-pink/60" />
+              </span>
+              <h3 className="text-xl font-bold text-brand-blue-deep">הממלכה המשותפת שלנו</h3>
+              <p className="mt-3 text-base leading-relaxed">
+                המרחב שנוצר ביחד, ודורש הסכמה ותיאום בין שניכם.
+              </p>
+            </div>
+            <div className="relative rounded-lg border border-brand-pink/60 bg-linear-to-bl from-brand-blue to-brand-blue-deep px-4 py-6 shadow-soft md:py-8">
+              <span aria-hidden="true" className="mx-auto mb-4 block size-8 rounded-full border border-brand-cream bg-brand-cream/15" />
+              <h3 className="text-xl font-bold text-on-dark">המרחב שלך</h3>
+              <p className="mt-3 text-base leading-relaxed text-on-dark/90">
+                מה ששייך לבן/בת הזוג: התחושות, הצרכים והגבולות שלו/שלה.
+              </p>
+            </div>
+          </div>
+          <p className="mx-auto mt-10 max-w-2xl text-lg text-on-dark/90">
+            כאשר מבינים טוב יותר את הגבולות, הצרכים והמרחב המשותף, אפשר להתחיל לנהל גם את המחלוקות בצורה אחרת.
           </p>
           <div className="mt-8">
             <CTA variant="pink">כן, אני רוצה מקום בשידור החינמי! ←</CTA>
