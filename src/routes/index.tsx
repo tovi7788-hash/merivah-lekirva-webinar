@@ -670,25 +670,17 @@ function Index() {
         </div>
       </section>
 
-      {/* 12. קהילה */}
-      <section className="bg-brand-sage px-5 py-14">
-        <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 text-center md:flex-row md:text-right">
-          <div>
-            <h2 className="text-2xl font-extrabold">רוצים גם קהילה, לא רק מפגש אחד?</h2>
-            <p className="mt-1">מצטרפים לקבוצת הוואטסאפ של יובל — תכנים ועדכונים שוטפים.</p>
-          </div>
-          <a
-            href={WHATSAPP_URL}
-            className="btn-pill shrink-0 border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-primary-foreground"
-          >
-            להצטרפות לקבוצה ←
-          </a>
-        </div>
-      </section>
-
       {/* 13. פוטר */}
-      <footer className="px-5 pb-32 pt-8 text-center text-sm text-brand-clay">
-        © יובל סודאי — פסיכותרפיה, ייעוץ זוגי ושיטת המפה הזוגית · עיצוב ובניית הדף: טובי קבלן
+      <footer className="border-t border-border px-5 pb-32 pt-8 text-center text-sm text-brand-clay">
+        <div className="mx-auto max-w-4xl">
+          <p className="font-semibold text-brand-blue">© יובל סודאי — פסיכותרפיה, ייעוץ זוגי ושיטת המפה הזוגית</p>
+          <nav aria-label="פרטי קשר" className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6">
+            <a href="mailto:office@yuvalsudai.com" className="break-words underline-offset-4 hover:text-brand-blue hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"><bdi>office@yuvalsudai.com</bdi></a>
+            <a href="tel:0534524138" className="underline-offset-4 hover:text-brand-blue hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"><bdi>053-452-4138</bdi></a>
+            <a href="https://yuvalsudai.com" target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:text-brand-blue hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"><bdi>yuvalsudai.com</bdi></a>
+          </nav>
+          <p className="mt-6">עיצוב ובניית הדף: טובי קבלן</p>
+        </div>
       </footer>
 
       {/* 14. וואטסאפ צף — שמאל */}
