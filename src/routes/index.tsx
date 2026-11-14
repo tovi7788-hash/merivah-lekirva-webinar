@@ -561,8 +561,8 @@ function Index() {
 
       {/* 8. מתנה */}
       <section className="px-5 pb-20">
-        <div className="bg-gift mx-auto grid max-w-5xl items-center gap-12 overflow-hidden rounded-[32px] px-6 py-14 text-on-dark shadow-card sm:px-12 md:grid-cols-[auto_1fr]">
-          <div className="relative mx-auto w-56 sm:w-64">
+        <div className="bg-gift mx-auto grid max-w-5xl items-center gap-12 overflow-hidden rounded-[32px] px-6 py-14 text-on-dark shadow-card sm:px-12 md:grid-cols-[1fr_1.3fr]">
+          <div className="relative mx-auto w-full max-w-72 md:max-w-80">
             <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-[2deg] rounded-2xl bg-on-dark/20" />
             <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rotate-[0deg] rounded-2xl bg-on-dark/35" />
             <div className="relative flex aspect-[3/4] -rotate-[2.5deg] flex-col items-center justify-between rounded-2xl bg-brand-blue-deep p-6 text-center shadow-card ring-1 ring-on-dark/20">
@@ -576,16 +576,25 @@ function Index() {
             </div>
           </div>
           <div className="text-center md:text-right">
-            <p className="font-bold text-brand-pink">🎁 מתנה למשתתפים שנשארים עד סוף המפגש</p>
-            <h2 className="font-display-tight mt-3 text-5xl text-on-dark sm:text-6xl">
-              מדריך "5 השאלות שיחזירו אותך לעצמך"
+            <h2 className="font-display-tight text-5xl text-on-dark sm:text-6xl">
+              מתנה למי שיישאר איתנו עד סוף המפגש
             </h2>
+            <h3 className="mt-6 text-2xl font-bold leading-snug text-brand-pink">
+              מדריך 5 השאלות שיחזירו אותך לעצמך
+            </h3>
+            <div aria-hidden="true" className="mt-6 flex items-center justify-center gap-4 md:justify-start">
+              <span className="text-5xl font-light tabular-nums leading-none text-brand-pink">5</span>
+              <div className="flex gap-1.5 border-b border-brand-pink/40 pb-2">
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <span key={n} className="h-5 w-1.5 rounded-sm bg-brand-pink/70" />
+                ))}
+              </div>
+            </div>
             <p className="mt-5 text-lg text-on-dark/90">
-              כלי עבודה אישי שיובל משתמש בו עם לקוחות פרטיים. מדריך שנכתב בעריכה אישית של יובל, עם
-              5 שאלות מדויקות שמחזירות בהירות בתוך הזוגיות — אותו תהליך שיובל מלמד בפגישות אישיות.
+              מדריך אישי מאת יובל סודאי, עם חמש שאלות שיעזרו לכם לעצור לרגע, להתבונן במה שקורה בתוך הקשר ולהבין טוב יותר מה חשוב לכם.
             </p>
-            <p className="mt-5 inline-block rounded-full border border-on-dark/30 px-4 py-1.5 text-sm font-semibold">
-              במתנה — ללא עלות · רק למי שצופה במפגש המלא עד הסוף
+            <p className="mt-6 border-t border-on-dark/20 pt-5 text-base font-semibold text-on-dark">
+              המדריך יוענק למשתתפים שיישארו עד סוף המפגש.
             </p>
           </div>
         </div>
