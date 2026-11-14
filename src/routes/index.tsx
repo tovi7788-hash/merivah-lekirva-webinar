@@ -333,7 +333,7 @@ function Index() {
           </div>
           <div className="flex justify-center">
             <Button asChild className="h-[56px] w-full max-w-[360px] rounded-full bg-brand-blue px-3 text-[17px] font-bold text-primary-foreground shadow-soft hover:bg-brand-blue-deep hover:shadow-card sm:w-auto sm:px-8 sm:text-[18px]">
-              <a href="#register" onClick={scrollToForm}>שריינו לי מקום בשידור החינמי ←</a>
+              <a href="#register" onClick={scrollToForm}>שריינו מקום למפגש ללא עלות ←</a>
             </Button>
           </div>
           <p className="mx-auto mt-[12px] max-w-xl text-[17px] leading-[30px] text-brand-clay">
@@ -402,7 +402,7 @@ function Index() {
             שעדיין לא הבנתם.
           </p>
           <div className="mt-8 text-center">
-            <CTA variant="pink">כן, אני רוצה מקום בשידור החינמי! ←</CTA>
+            <CTA variant="pink">שריינו מקום למפגש ללא עלות ←</CTA>
           </div>
         </div>
       </section>
@@ -451,7 +451,7 @@ function Index() {
             כאשר מבינים טוב יותר את הגבולות, הצרכים והמרחב המשותף, אפשר להתחיל לנהל גם את המחלוקות בצורה אחרת.
           </p>
           <div className="mt-8">
-            <CTA variant="pink">כן, אני רוצה מקום בשידור החינמי! ←</CTA>
+            <CTA variant="pink">שריינו מקום למפגש ללא עלות ←</CTA>
           </div>
         </div>
       </section>
@@ -573,7 +573,7 @@ function Index() {
               </p>
             </div>
             <div className="mt-8">
-              <CTA>כן, אני רוצה מקום בשידור החינמי! ←</CTA>
+              <CTA>שריינו מקום למפגש ללא עלות ←</CTA>
             </div>
           </div>
         </div>
@@ -585,7 +585,7 @@ function Index() {
           <SectionTitle>עומק מקצועי, הסברים בהירים ותובנות שנשארות</SectionTitle>
           <TestimonialsGallery />
           <div className="mt-10 text-center">
-            <CTA>כן, אני רוצה מקום בשידור החינמי! ←</CTA>
+            <CTA>שריינו מקום למפגש ללא עלות ←</CTA>
           </div>
         </div>
       </section>
@@ -668,7 +668,7 @@ function Index() {
             </ul>
           </div>
           <div className="mt-8">
-            <CTA variant="pink">כן, אני רוצה מקום בשידור החינמי! ←</CTA>
+            <CTA variant="pink">שריינו מקום למפגש ללא עלות ←</CTA>
           </div>
         </div>
       </section>
