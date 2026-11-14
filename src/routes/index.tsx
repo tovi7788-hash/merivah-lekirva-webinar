@@ -622,13 +622,19 @@ function Index() {
       <section className="px-5 py-20">
         <div className="mx-auto max-w-4xl rounded-[32px] bg-brand-blue px-6 py-14 text-center text-on-dark shadow-card">
           <h2 className="font-display-tight text-5xl text-on-dark sm:text-6xl">
-            הקשר שלכם ראוי לעוד אהבה וחמימות
+            מוכנים ללמוד לנהל את המריבות אחרת?
           </h2>
           <p className="mt-4 text-lg text-on-dark/90">
-            השאירו פרטים עכשיו, ותקבלו קישור אישי ותזכורת לפני המפגש.
+            הצטרפו למפגש החי עם יובל סודאי, וקבלו כלים מעשיים להבנת דפוסי המריבה, להצבת גבולות ולהעברת מסרים בצורה נכונה.
           </p>
           <div className="mt-7">
-            <MeetingPills dark />
+            <ul className="flex flex-col items-center gap-2.5 text-[0.95rem] font-semibold">
+              {["יום רביעי | ח' כסלו | 18.11.2026", "20:30 | שידור חי בזום | ללא עלות"].map((t) => (
+                <li key={t} className="rounded-full border border-on-dark/20 bg-on-dark/10 px-4 py-2 text-on-dark shadow-soft">
+                  {t}
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="mt-8">
             <CTA variant="pink">כן, אני רוצה מקום בשידור החינמי! ←</CTA>

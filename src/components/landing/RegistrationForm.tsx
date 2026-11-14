@@ -125,7 +125,7 @@ export function RegistrationForm({ source = null }: { source?: string | null }) 
         disabled={status === "sending" || !values.consent}
         className="btn-pill w-full bg-brand-blue text-primary-foreground shadow-soft disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0"
       >
-        {status === "sending" ? "שולחים..." : "כן, אני רוצה מקום בשידור החינמי! ←"}
+        {status === "sending" ? "שולחים..." : "אני רוצה להצטרף למפגש"}
       </button>
     </form>
   );
