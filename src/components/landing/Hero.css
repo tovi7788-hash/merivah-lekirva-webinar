@@ -93,18 +93,51 @@
 }
 
 @media (max-width: 600px) {
-  .campaign-hero__visual { aspect-ratio: 4 / 3; }
+  .campaign-hero__visual {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    aspect-ratio: auto;
+  }
   .campaign-hero__image {
-    object-position: 84% 50%;
-    transform: scale(1.55);
-    transform-origin: 84% 50%;
+    grid-area: 2 / 1;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+  }
+  .campaign-hero__badge {
+    grid-area: 1 / 1;
+    position: relative;
+    top: auto;
+    left: auto;
+    justify-self: center;
+    transform: none;
+    margin: 16px 0 12px;
+    padding: 10px 18px;
+  }
+  .campaign-hero__badge img {
+    height: 48px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  .campaign-hero__title-block {
+    grid-area: 3 / 1;
+    position: relative;
+    bottom: auto;
+    padding: 14px 16px 20px;
+    min-width: 0;
+  }
+  .campaign-hero__eyebrow {
+    color: var(--brand-pink);
   }
   .campaign-hero__title { font-size: 64px; }
   .campaign-hero__light-track {
-    width: 177.7778%;
-    left: -65.3333%;
-    transform: scale(1.55);
-    transform-origin: 84% 50%;
+    grid-area: 2 / 1;
+    width: 100%;
+    left: 0;
+    transform: none;
   }
 }
 

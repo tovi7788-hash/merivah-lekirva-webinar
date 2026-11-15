@@ -1,4 +1,5 @@
 # Requested fixes
+- [x] Verify and clean up the mobile hero illustration, logo and title without changing desktop; capture before/after at 375px.
 - [x] Split operational/marketing consent, add default-false storage, test both choices and verify 375px/1280px without publishing.
 - [x] Replace only testimonial asset pointers 13–18 after visual comparison; verify 375px/1280px rendering, spotlight and build without publishing.
 - [x] Replace only testimonial asset pointers 7–12 after visual comparison; verify 375px/1280px rendering, spotlight and build without publishing.
