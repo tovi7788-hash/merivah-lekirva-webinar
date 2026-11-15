@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import yuvalPhoto from "@/assets/yuval-workshop.jpeg.asset.json";
 import heroConflictDolls from "@/assets/hero-conflict-dolls.png.asset.json";
 import "@/components/landing/Hero.css";
+import "@/components/landing/FloatingControls.css";
 import yuvalLogo from "@/assets/yuval-logo.png.asset.json";
 import testimonial7 from "@/assets/testimonial-new-7.png.asset.json";
 import testimonial8 from "@/assets/testimonial-new-8.png.asset.json";
@@ -274,7 +275,8 @@ const faqs = [
 function Index() {
   const { ref } = Route.useSearch();
   return (
-    <div className="overflow-x-clip">
+    <div className="campaign-page overflow-x-clip">
+      <div className="campaign-page__content">
       {/* 1. HERO */}
       <div className="campaign-hero bg-brand-blue-deep text-center text-on-dark" dir="rtl">
         <section aria-label="ממריבה לקרבה" className="campaign-hero__visual">
@@ -676,6 +678,8 @@ function Index() {
         </div>
       </section>
 
+      </div>
+      <div className="campaign-floating-controls">
       {/* 14. וואטסאפ צף — שמאל */}
       <a
         href={WHATSAPP_URL}
@@ -704,6 +708,7 @@ function Index() {
         </span>
         <span className="hidden text-sm font-bold text-brand-blue sm:inline">יש לנו מדריך!</span>
       </a>
+      </div>
     </div>
   );
 }

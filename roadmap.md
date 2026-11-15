@@ -30,3 +30,7 @@
 # Focused hero hierarchy
 - [x] Update only the hero order, exact body copy, typography and CTA dimensions.
 - [x] Verify desktop and 375px/390px layouts and capture screenshots: no horizontal overflow, CTA is unobstructed and above the fold; existing smooth scroll stops short of the form on mobile, reported without changing other sections.
+
+# Mobile persistent controls
+- [x] Reproduce text overlaps during a whole-page 375px scroll and capture before evidence.
+- [x] Reduce mobile controls and reserve viewport space; verify 158 whole-page scroll positions, all six CTAs, guide/WhatsApp links, FAQ and desktop preservation; capture mobile screenshots.

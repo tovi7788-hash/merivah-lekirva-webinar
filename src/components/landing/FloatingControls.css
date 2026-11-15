@@ -1,0 +1,63 @@
+.campaign-page__content,
+.campaign-floating-controls {
+  display: contents;
+}
+
+@media (max-width: 639px) {
+  /* Reserve viewport space, not only document-end space: fixed controls
+     otherwise cross text at intermediate scroll positions. */
+  .campaign-page {
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .campaign-page__content {
+    display: block;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+    scroll-padding-bottom: 16px;
+  }
+
+  .campaign-floating-controls {
+    display: flex;
+    direction: ltr;
+    flex: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px calc(8px + env(safe-area-inset-bottom, 0px));
+    background: var(--background);
+    border-top: 1px solid var(--border);
+  }
+
+  .campaign-floating-controls > a {
+    direction: rtl;
+    position: static;
+    width: 48px;
+    height: 48px;
+    padding: 2px;
+    animation: none;
+    flex: none;
+  }
+
+  .campaign-floating-controls > a > span:first-child {
+    width: 44px;
+    height: 44px;
+  }
+
+  .campaign-floating-controls svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 639px) and (prefers-reduced-motion: reduce) {
+  .campaign-page__content {
+    scroll-behavior: auto;
+  }
+}
