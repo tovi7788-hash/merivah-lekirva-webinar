@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "asset_id": "8045225f-8147-4e61-a045-312c06db0f6f",
+  "asset_id": "d0adedbc-3d86-4574-b5e5-a0b891b708a0",
   "project_id": "3efe084b-a441-44ba-8c84-373406949474",
-  "url": "/__l5e/assets-v1/8045225f-8147-4e61-a045-312c06db0f6f/hero-conflict-dolls.png",
-  "r2_key": "a/v1/3efe084b-a441-44ba-8c84-373406949474/8045225f-8147-4e61-a045-312c06db0f6f/hero-conflict-dolls.png",
-  "original_filename": "hero-conflict-dolls.png",
-  "size": 4346424,
-  "content_type": "image/png",
-  "created_at": "2026-11-15T01:27:21Z"
+  "url": "/__l5e/assets-v1/d0adedbc-3d86-4574-b5e5-a0b891b708a0/hero-conflict-dolls-optimized.jpg",
+  "r2_key": "a/v1/3efe084b-a441-44ba-8c84-373406949474/d0adedbc-3d86-4574-b5e5-a0b891b708a0/hero-conflict-dolls-optimized.jpg",
+  "original_filename": "hero-conflict-dolls-optimized.jpg",
+  "size": 87285,
+  "content_type": "image/jpeg",
+  "created_at": "2026-11-15T08:02:21Z"
 }

@@ -1,4 +1,6 @@
 # Requested fixes
+- [x] Replace only the hero asset pointer with the visually verified compressed JPEG; retain import and crop, verify 375px/768px/1280px without publishing.
+- [x] Show all testimonial images with contain and a measured representative ratio on a soft brand background; verify spotlight, registration links and unchanged form behavior.
 - [x] Update only hero promise paragraphs, section 2 copy, second takeaway and six CTA labels; verify 375px/768px/1280px, links and form behavior without publishing.
 - [x] Update only section 3's copy/topic pills, the first takeaway description and section 8's gift copy; verify scope, 375px/1280px and registration links without publishing.
 - [x] Wrap section 4's four unchanged benefit articles in the supplied BorderGlow and verify pointer effects, 375px/1280px layout and build without publishing.

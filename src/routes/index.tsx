@@ -547,7 +547,7 @@ function Index() {
             }))}
             theme="light"
             columns={3}
-            aspectRatio="9 / 16"
+            aspectRatio="860 / 1013"
             showInfo={false}
             reveal="spotlight"
             className="mt-10 md:mt-12"

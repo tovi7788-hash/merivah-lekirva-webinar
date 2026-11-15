@@ -80,12 +80,12 @@ a.chroma-card:focus-visible { outline: 2px solid var(--chroma-ink); outline-offs
   aspect-ratio: var(--chroma-ratio);
   border-radius: max(0px, calc(var(--chroma-radius) - 8px));
   overflow: hidden;
-  background: var(--chroma-well);
+  background: var(--brand-pink-soft);
 }
 
 .chroma-media img {
   position: absolute; inset: 0; display: block; width: 100%; height: 100%;
-  object-fit: cover; user-select: none; -webkit-user-drag: none;
+  object-fit: contain; user-select: none; -webkit-user-drag: none;
 }
 
 .chroma-mono { filter: grayscale(var(--chroma-gray)) brightness(calc(1 - var(--chroma-dim))); }
