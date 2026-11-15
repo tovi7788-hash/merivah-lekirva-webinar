@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Flower } from "@/components/landing/Flower";
 import { RegistrationForm } from "@/components/landing/RegistrationForm";
 import { ChromaGrid } from "@/components/landing/ChromaGrid";
+import BorderGlow from "@/components/landing/BorderGlow";
 import { Button } from "@/components/ui/button";
 import yuvalPhoto from "@/assets/yuval-workshop.jpeg.asset.json";
 import heroConflictDolls from "@/assets/hero-conflict-dolls.png.asset.json";
@@ -443,6 +444,7 @@ function Index() {
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {takeaways.slice(0, 2).map(([t, d], i) => (
+                <BorderGlow key={t} glowColor="236 45% 44%" colors={['#3F5B6E', '#F5B8B8', '#2F4555']} backgroundColor="#2F4555" borderRadius={16} glowRadius={24} edgeSensitivity={40}>
                 <article key={t} className="flex gap-4 rounded-lg border-s-4 border-brand-pink bg-brand-blue-deep p-5 text-on-dark sm:p-6">
                   <span className="shrink-0 text-2xl font-light tabular-nums text-brand-pink" aria-hidden="true">0{i + 1}</span>
                   <div className="min-w-0">
@@ -450,6 +452,7 @@ function Index() {
                     <p className="mt-2 text-on-dark/90">{d}</p>
                   </div>
                 </article>
+                </BorderGlow>
               ))}
             </div>
             <div aria-hidden="true" className="flex h-20 items-center justify-center text-brand-blue/50 sm:h-24">
@@ -465,6 +468,7 @@ function Index() {
             </div>
             <div className="grid gap-6 sm:grid-cols-2 sm:gap-8">
               {takeaways.slice(2).map(([t, d], i) => (
+                <BorderGlow key={t} glowColor="236 45% 44%" colors={['#3F5B6E', '#F5B8B8', '#2F4555']} backgroundColor="#FFFBF5" borderRadius={16} glowRadius={24} edgeSensitivity={40}>
                 <article key={t} className="rounded-lg border border-brand-pink bg-brand-pink-soft p-7 sm:p-8">
                   <div className="mb-5 flex items-center gap-3">
                     <span className="text-2xl font-light tabular-nums text-brand-blue" aria-hidden="true">0{i + 3}</span>
@@ -473,6 +477,7 @@ function Index() {
                   <h3 className="text-xl font-extrabold leading-snug text-brand-blue">{t}</h3>
                   <p className="mt-3 text-brand-ink">{d}</p>
                 </article>
+                </BorderGlow>
               ))}
                 </div>
           </div>

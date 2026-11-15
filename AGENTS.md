@@ -36,3 +36,4 @@ use the editor.
 - Reuse RegistrationForm for quiz signups with a fixed source, independently of the campaign route; this preserves one registration validation and success-navigation path.
 - Render testimonials with the standalone ChromaGrid TSX/CSS component using the existing asset list; keeping the supplied interaction logic isolated prevents changes to other landing sections.
 - Scope campaign hero styles and motion to `.campaign-hero` in its own stylesheet so presentation changes never affect the remaining sections.
+- Keep the supplied BorderGlow logic and stylesheet isolated; wrap benefit articles without modifying their content or other campaign sections.
