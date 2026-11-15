@@ -248,7 +248,7 @@ function NumberBadge({ n }: { n: number }) {
 }
 
 const takeaways = [
-  ["להפחית את עוצמת המריבות ולדעת איפה לעצור.", "לדעת מתי להציב קו אדום, בלי להחריף את העימות."],
+  ["להפחית את עוצמת המריבות ולדעת איפה לעצור.", "לזהות מה מוביל להסלמה, לעצור את המעגל החוזר וללמוד איך למנוע את המריבה הבאה."],
   ["לא להגיע שוב ושוב לאותה נקודת רתיחה.", "בלי להתרגש כל כך מתגובות מסוימות של בן או בת הזוג, וללמוד לבחור תגובה אחרת."],
   ["להביע את עצמכם ולהרגיש שמבינים אתכם.", "לדעת להעביר את מה שחשוב לכם, ולהרגיש שבאמת מקשיבים לכם."],
   ["להפוך מחלוקת להזדמנות להתקדמות ולחיזוק הקשר.", "מתוך הבנה טובה יותר של הצד השני, לא מתוך כעס או ויתור."],
@@ -390,40 +390,20 @@ function Index() {
             כדי לנהל מריבה אחרת, צריך להבין קודם מה באמת קורה בתוכה.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-on-dark/90">
-            לא כל מחלוקת מתחילה במקום שבו היא נראית. לפעמים הוויכוח הוא רק הביטוי החיצוני לצורך שלא קיבל מקום, לגבול שלא הובן או לציפייה שלא נאמרה.
+            מריבה היא לא רק חילוקי דעות. הדרך שבה אנחנו מגיבים, מקשיבים ומעבירים מסרים משפיעה על האופן שבו היא מתפתחת ועל המקום שבו היא מסתיימת.
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-on-dark/90">
-            במפגש יובל יכיר לכם דרך להתבונן על המרחב הזוגי ולהבין מה שייך לכל אחד מכם, מה דורש תיאום ומה קורה במרחב המשותף.
+            במפגש יובל יכיר לכם חמישה נושאים מרכזיים שיעזרו לכם להבין את דינמיקת המריבה וללמוד איך לנהל אותה אחרת.
           </p>
-          <div className="relative isolate mx-auto mt-10 grid max-w-3xl grid-cols-1 items-center gap-6 md:grid-cols-3 md:gap-3">
-            <div aria-hidden="true" className="absolute inset-y-6 left-1/2 -z-10 w-px -translate-x-1/2 bg-brand-pink/60 md:inset-x-6 md:inset-y-auto md:top-1/2 md:h-px md:w-auto md:translate-x-0" />
-            <div className="relative rounded-lg border border-brand-pink/60 bg-linear-to-br from-brand-blue to-brand-blue-deep px-4 py-6 shadow-soft md:py-8">
-              <span aria-hidden="true" className="mx-auto mb-4 block size-8 rounded-full border border-brand-pink bg-brand-pink/15" />
-              <h3 className="text-xl font-bold text-on-dark">המרחב שלי</h3>
-              <p className="mt-3 text-base leading-relaxed text-on-dark/90">
-                מה ששייך לי: התחושות, הצרכים והגבולות שלי בקשר.
-              </p>
-            </div>
-            <div className="relative rounded-lg border border-brand-pink bg-linear-to-br from-brand-cream to-brand-pink px-4 py-8 text-brand-blue-deep shadow-card ring-4 ring-brand-cream/10 md:py-10">
-              <span aria-hidden="true" className="relative mx-auto mb-4 block h-8 w-12">
-                <span className="absolute right-0 top-0 size-8 rounded-full border border-brand-blue bg-brand-blue/10" />
-                <span className="absolute left-0 top-0 size-8 rounded-full border border-brand-blue bg-brand-pink/60" />
-              </span>
-              <h3 className="text-xl font-bold text-brand-blue-deep">הממלכה המשותפת שלנו</h3>
-              <p className="mt-3 text-base leading-relaxed">
-                המרחב שנוצר ביחד, ודורש הסכמה ותיאום בין שניכם.
-              </p>
-            </div>
-            <div className="relative rounded-lg border border-brand-pink/60 bg-linear-to-bl from-brand-blue to-brand-blue-deep px-4 py-6 shadow-soft md:py-8">
-              <span aria-hidden="true" className="mx-auto mb-4 block size-8 rounded-full border border-brand-cream bg-brand-cream/15" />
-              <h3 className="text-xl font-bold text-on-dark">המרחב שלך</h3>
-              <p className="mt-3 text-base leading-relaxed text-on-dark/90">
-                מה ששייך לבן/בת הזוג: התחושות, הצרכים והגבולות שלו/שלה.
-              </p>
-            </div>
-          </div>
+          <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3">
+            {topics.map(([title]) => (
+              <li key={title} className="rounded-full border border-on-dark/20 bg-on-dark/10 px-4 py-2 text-on-dark shadow-soft">
+                {title}
+              </li>
+            ))}
+          </ul>
           <p className="mx-auto mt-10 max-w-2xl text-lg text-on-dark/90">
-            כאשר מבינים טוב יותר את הגבולות, הצרכים והמרחב המשותף, אפשר להתחיל לנהל גם את המחלוקות בצורה אחרת.
+            כאשר מבינים את הדינמיקה שמניעה את המריבה, אפשר להתחיל לנהל אותה אחרת.
           </p>
           <div className="mt-8">
             <CTA variant="pink">שריינו מקום למפגש ללא עלות ←</CTA>
@@ -592,7 +572,7 @@ function Index() {
               <div>
                 <p className="text-xs font-bold tracking-widest text-on-dark/70">מדריך אישי</p>
                 <p className="font-display-tight text-[6rem] leading-none text-brand-pink">5</p>
-                <p className="text-lg font-extrabold leading-snug text-on-dark">השאלות שיחזירו אותך לעצמך</p>
+                <p className="text-lg font-extrabold leading-snug text-on-dark">תובנות וכלים מעשיים</p>
               </div>
               <p className="text-xs text-on-dark/70">מאת יובל סודאי</p>
             </div>
@@ -602,7 +582,7 @@ function Index() {
               מתנה למי שיישאר איתנו עד סוף המפגש
             </h2>
             <h3 className="mt-6 text-2xl font-bold leading-snug text-brand-pink">
-              מדריך 5 השאלות שיחזירו אותך לעצמך
+              מדריך מתנה מאת יובל סודאי
             </h3>
             <div aria-hidden="true" className="mt-6 flex items-center justify-center gap-4 md:justify-start">
               <span className="text-5xl font-light tabular-nums leading-none text-brand-pink">5</span>
@@ -613,7 +593,7 @@ function Index() {
               </div>
             </div>
             <p className="mt-5 text-lg text-on-dark/90">
-              מדריך אישי מאת יובל סודאי, עם חמש שאלות שיעזרו לכם לעצור לרגע, להתבונן במה שקורה בתוך הקשר ולהבין טוב יותר מה חשוב לכם.
+              תובנות וכלים מעשיים מעולמו המקצועי של יובל, שיאפשרו לכם להמשיך לקחת איתכם מהמפגש גם לאחר סיומו.
             </p>
             <p className="mt-6 border-t border-on-dark/20 pt-5 text-base font-semibold text-on-dark">
               המדריך יוענק למשתתפים שיישארו עד סוף המפגש.

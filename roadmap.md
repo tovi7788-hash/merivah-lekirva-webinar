@@ -1,4 +1,5 @@
 # Requested fixes
+- [x] Update only section 3's copy/topic pills, the first takeaway description and section 8's gift copy; verify scope, 375px/1280px and registration links without publishing.
 - [x] Wrap section 4's four unchanged benefit articles in the supplied BorderGlow and verify pointer effects, 375px/1280px layout and build without publishing.
 - [x] Rebuild only hero sections 1/1b with the uploaded heart illustration; verify 1280px/390px/375px, motion preferences and registration scrolling without publishing.
 - [x] Replace section 7 with the supplied ChromaGrid, change only the registration submit label, and verify 375px/1280px rendering and regression tests.
