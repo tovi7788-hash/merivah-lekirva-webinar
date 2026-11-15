@@ -307,7 +307,7 @@ function Index() {
           </p>
           <div className="mt-7 rounded-lg border border-on-dark/15 bg-card/7 p-5 sm:p-7">
             <p className="text-base font-semibold leading-relaxed sm:text-lg">
-              ב-90 דקות תלמדו איך להפחית את עוצמת המריבות ואת המשכן, להציב גבולות ולשמור על קווים אדומים, להבין ולהעביר מסרים בצורה נכונה.
+              ב-90 דקות תלמדו איך להפחית את עוצמת המריבות ואת המשכן, להציב גבולות, ולשמור על קווים אדומים, להבין ולהעביר מסרים בצורה נכונה.
             </p>
             <p className="mt-4 text-base font-semibold leading-relaxed sm:text-lg">
               כך תוכלו להפוך גם מחלוקת להזדמנות להבנה ולהתקדמות בקשר.
