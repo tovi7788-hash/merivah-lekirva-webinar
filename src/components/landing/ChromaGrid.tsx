@@ -106,10 +106,16 @@ export const ChromaGrid = ({
   className = ''
 }: ChromaGridProps) => {
   const rootRef = useRef<HTMLDivElement>(null);
-  const settingsRef = useRef<{ damping: number; fadeOut: number; spotlight: boolean } | null>(null);
+  const settingsRef = useRef<{ damping: number; fadeOut: number; spotlight: boolean; grayscale: number; dim: number } | null>(null);
   const placeRef = useRef<(() => void) | null>(null);
   const data = items?.length ? items : [];
-  settingsRef.current = { damping, fadeOut, spotlight: reveal !== 'card' };
+  settingsRef.current = {
+    damping,
+    fadeOut,
+    spotlight: reveal !== 'card',
+    grayscale: clamp(grayscale, 0, 1),
+    dim: clamp(dim, 0, 0.9),
+  };
 
   useEffect(() => {
     const root = rootRef.current;
@@ -154,6 +160,8 @@ export const ChromaGrid = ({
       } else {
         raf = requestAnimationFrame(frame);
       }
+      root.style.setProperty('--chroma-gray', (s.grayscale * (1 - state.power)).toFixed(4));
+      root.style.setProperty('--chroma-dim', (s.dim * (1 - state.power)).toFixed(4));
     };
 
     const wake = () => {
@@ -235,7 +243,6 @@ export const ChromaGrid = ({
               <span className="chroma-wash" aria-hidden="true" />
               <div className="chroma-media" data-chroma-area="">
                 <img className="chroma-mono" src={item.image} alt={item.alt ?? item.title ?? ''} loading="lazy" />
-                <img className="chroma-color" src={item.image} alt="" aria-hidden="true" loading="lazy" />
                 <span className="chroma-media-rim" aria-hidden="true" />
               </div>
               {showInfo && (item.title || item.subtitle) && (

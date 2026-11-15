@@ -64,7 +64,7 @@
 a.chroma-card:active { filter: var(--chroma-press); }
 a.chroma-card:focus-visible { outline: 2px solid var(--chroma-ink); outline-offset: 2px; }
 
-.chroma-wash, .chroma-color, .chroma-card-glow {
+.chroma-wash, .chroma-card-glow {
   -webkit-mask-image: radial-gradient(circle var(--chroma-r) at calc(var(--chroma-x) - var(--chroma-ox, 0px)) calc(var(--chroma-y) - var(--chroma-oy, 0px)), var(--chroma-stops));
   mask-image: radial-gradient(circle var(--chroma-r) at calc(var(--chroma-x) - var(--chroma-ox, 0px)) calc(var(--chroma-y) - var(--chroma-oy, 0px)), var(--chroma-stops));
 }
@@ -89,7 +89,6 @@ a.chroma-card:focus-visible { outline: 2px solid var(--chroma-ink); outline-offs
 }
 
 .chroma-mono { filter: grayscale(var(--chroma-gray)) brightness(calc(1 - var(--chroma-dim))); }
-.chroma-color { opacity: var(--chroma-power); }
 
 .chroma-media-rim {
   position: absolute; inset: 0; border-radius: inherit;
@@ -126,12 +125,12 @@ a.chroma-card:focus-visible { outline: 2px solid var(--chroma-ink); outline-offs
 }
 
 .chroma-grid[data-reveal='card'] .chroma-wash,
-.chroma-grid[data-reveal='card'] .chroma-color,
 .chroma-grid[data-reveal='card'] .chroma-card-glow {
   -webkit-mask-image: none; mask-image: none; opacity: 0;
   transition: opacity var(--chroma-fade) ease;
 }
 
+.chroma-grid[data-reveal='card'] .chroma-mono { transition: filter 0.3s ease; }
+.chroma-grid[data-reveal='card'] .chroma-card:hover .chroma-mono { --chroma-gray: 0; --chroma-dim: 0; }
 .chroma-grid[data-reveal='card'] .chroma-card:hover .chroma-wash { opacity: calc(var(--chroma-glow) * 0.45); transition-duration: 0.3s; }
-.chroma-grid[data-reveal='card'] .chroma-card:hover .chroma-color { opacity: 1; transition-duration: 0.3s; }
 .chroma-grid[data-reveal='card'] .chroma-card:hover .chroma-card-glow { opacity: var(--chroma-border); transition-duration: 0.3s; }

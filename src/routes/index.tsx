@@ -664,7 +664,14 @@ function Index() {
             </a>
             <p className="mt-2">© כל הזכויות שמורות</p>
             <hr className="mx-auto my-4 w-24 border-border" />
-            <p>Tovi Kablan - אסטרטגיה, ניהול קמפיין, עיצוב ופיתוח</p>
+            <a
+              href="https://tovikablan.co.il"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 hover:underline"
+            >
+              Tovi Kablan - אסטרטגיה, ניהול קמפיין, עיצוב ופיתוח
+            </a>
           </div>
         </div>
       </section>
