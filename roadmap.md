@@ -1,4 +1,5 @@
 # Requested fixes
+- [x] Replace only testimonial asset pointers 7–12 after visual comparison; verify 375px/1280px rendering, spotlight and build without publishing.
 - [x] Replace only the hero asset pointer with the visually verified compressed JPEG; retain import and crop, verify 375px/768px/1280px without publishing.
 - [x] Show all testimonial images with contain and a measured representative ratio on a soft brand background; verify spotlight, registration links and unchanged form behavior.
 - [x] Update only hero promise paragraphs, section 2 copy, second takeaway and six CTA labels; verify 375px/768px/1280px, links and form behavior without publishing.

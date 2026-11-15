@@ -1,11 +1,11 @@
 {
-  "asset_id": "08b52ca8-9a80-4e82-bae6-750c9939e5ac",
-  "content_type": "image/png",
-  "created_at": "2026-11-12T10:02:43Z",
-  "original_filename": "testimonial-new-7.png",
+  "version": 1,
+  "asset_id": "8138f685-9bb9-4787-800d-ac00d163051c",
   "project_id": "3efe084b-a441-44ba-8c84-373406949474",
-  "r2_key": "a/v1/3efe084b-a441-44ba-8c84-373406949474/08b52ca8-9a80-4e82-bae6-750c9939e5ac/testimonial-new-7.png",
-  "size": 679614,
-  "url": "/__l5e/assets-v1/08b52ca8-9a80-4e82-bae6-750c9939e5ac/testimonial-new-7.png",
-  "version": 1
+  "url": "/__l5e/assets-v1/8138f685-9bb9-4787-800d-ac00d163051c/testimonial-7-opt.jpg",
+  "r2_key": "a/v1/3efe084b-a441-44ba-8c84-373406949474/8138f685-9bb9-4787-800d-ac00d163051c/testimonial-7-opt.jpg",
+  "original_filename": "testimonial-7-opt.jpg",
+  "size": 80416,
+  "content_type": "image/jpeg",
+  "created_at": "2026-11-15T10:06:31Z"
 }
