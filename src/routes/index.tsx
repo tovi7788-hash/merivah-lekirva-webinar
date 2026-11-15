@@ -249,7 +249,7 @@ function NumberBadge({ n }: { n: number }) {
 
 const takeaways = [
   ["להפחית את עוצמת המריבות ולמנוע את המריבה הבאה.", "לזהות מה מוביל להסלמה, לעצור את המעגל החוזר ולבחור תגובה אחרת לפני שהוויכוח הופך למריבה."],
-  ["לא להגיע שוב ושוב לאותה נקודת רתיחה.", "בלי להתרגש כל כך מתגובות מסוימות של בן או בת הזוג, וללמוד לבחור תגובה אחרת."],
+  ["להציב גבולות ולשמור על קווים אדומים.", "לדעת לזהות היכן עובר הגבול, איך לבטא אותו בצורה ברורה ואיך לשמור עליו בלי להחריף את העימות."],
   ["להביע את עצמכם ולהרגיש שמבינים אתכם.", "לדעת להעביר את מה שחשוב לכם, ולהרגיש שבאמת מקשיבים לכם."],
   ["להפוך מחלוקת להזדמנות להתקדמות ולחיזוק הקשר.", "מתוך הבנה טובה יותר של הצד השני, לא מתוך כעס או ויתור."],
 ];
@@ -307,7 +307,10 @@ function Index() {
           </p>
           <div className="mt-7 rounded-lg border border-on-dark/15 bg-card/7 p-5 sm:p-7">
             <p className="text-base font-semibold leading-relaxed sm:text-lg">
-              ב-90 דקות תלמדו איך להפחית את עוצמת המריבות ואת המשכן, להציב גבולות ולשמור על קווים אדומים, להבין ולהעביר מסרים בצורה נכונה – ולהפוך גם רגעים של מחלוקת להזדמנות לצמיחה ולחיזוק הקשר.
+              ב-90 דקות תלמדו איך להפחית את עוצמת המריבות ואת המשכן, להציב גבולות ולשמור על קווים אדומים, להבין ולהעביר מסרים בצורה נכונה.
+            </p>
+            <p className="mt-4 text-base font-semibold leading-relaxed sm:text-lg">
+              כך תוכלו להפוך גם מחלוקת להזדמנות להבנה ולהתקדמות בקשר.
             </p>
             <ul className="mt-5 flex flex-wrap justify-center gap-2 border-t border-dashed border-on-dark/20 pt-5 text-sm font-bold sm:text-base">
               {["יום רביעי 18.11.2026", "20:30", "מפגש חי בזום", "ללא עלות"].map((detail) => (
@@ -317,7 +320,7 @@ function Index() {
           </div>
           <div className="mt-7 flex justify-center">
             <Button asChild className="h-auto min-h-14 w-full max-w-md whitespace-normal rounded-full bg-brand-pink px-5 py-4 text-base font-bold text-brand-blue-deep shadow-soft hover:bg-brand-pink-soft hover:shadow-card sm:w-auto sm:px-10 sm:text-lg">
-              <a href="#register" onClick={scrollToForm}>שריינו מקום למפגש ללא עלות ←</a>
+              <a href="#register" onClick={scrollToForm}>שריינו לי מקום במפגש ללא עלות ←</a>
             </Button>
           </div>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-on-dark/75">
@@ -329,37 +332,32 @@ function Index() {
       {/* 2. הזדהות */}
       <section className="bg-brand-blue px-5 py-20 text-on-dark">
         <div className="mx-auto max-w-5xl">
-          <SectionTitle light>לתת מעצמך — בלי לאבד את עצמך</SectionTitle>
+          <SectionTitle light>שניכם רוצים לפתור את הבעיה. אז למה אתם שוב מוצאים את עצמכם באותה מריבה?</SectionTitle>
           <p className="mx-auto mt-5 max-w-3xl text-center text-lg text-on-dark/85">
-            בכל זוגיות יש "שלי" ו"שלך" — השאלה היא איפה עובר הגבול ביניהם, ומי קובע אותו. שני
-            אנשים אוהבים, שני אנשים שרוצים בטובת הקשר, אבל לפעמים כל אחד מהם חווה את המציאות
-            הזוגית בצורה שונה לחלוטין.
+            זה יכול להתחיל ממשהו קטן: משפט שנאמר בטון לא נכון, בקשה שלא נענתה או שיחה שרציתם לסיים בטוב. אבל מהר מאוד כל אחד מגיב אחרת, המתח עולה, ושוב אתם מוצאים את עצמכם באותו מעגל מוכר.
           </p>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {[
               {
-                tag: "הצד שלה",
                 bg: "bg-brand-pink-soft",
-                title: "מה קורה כשהוא לא רואה אותך?",
+                title: "כשאחד רוצה לדבר עכשיו",
                 items: [
-                  "את מדברת, והוא כאילו לא שומע — שוב ושוב",
-                  "מרגישה רחוקה ממנו גם כשאתם באותו חדר",
-                  'כל שיחה נגמרת בתחושה שאת "הבעיה"',
+                  "חשוב לו לפתור את העניין כאן ועכשיו, ולכן הוא ממשיך להסביר ולשאול.",
+                  "ככל שהוא מנסה להתקרב ולברר, הצד השני דווקא נסגר ומתרחק.",
+                  "בסוף שניהם מתוסכלים: אחד מרגיש שלא מקשיבים לו, והשני מרגיש שלא נותנים לו רגע לנשום.",
                 ],
               },
               {
-                tag: "הצד שלו",
                 bg: "bg-brand-cream",
-                title: "מה קורה כשהוא מרגיש שכל הזמן דורשים ממנו?",
+                title: "כשכל אחד מנסה להסביר את עצמו",
                 items: [
-                  "מה שלא תעשה, זה אף פעם לא מספיק",
-                  "אתה נותן ונותן — ומרגיש שזה לא נחשב",
-                  "כל שיחה הופכת לרשימה של מה עשית לא נכון",
+                  "אחד מסביר למה התכוון, אבל השני עדיין פגוע ממה ששמע.",
+                  "השיחה עוברת ממה שקרה עכשיו לכל הדברים שהצטברו במשך הזמן.",
+                  "במקום להבין אחד את השני, כל אחד עסוק בלהוכיח למה הוא צודק.",
                 ],
               },
             ].map((c) => (
-              <div key={c.tag} className={`rounded-3xl p-7 text-brand-ink shadow-card ${c.bg}`}>
-                <span className="text-sm font-bold text-brand-clay">{c.tag}</span>
+              <div key={c.title} className={`rounded-3xl p-7 text-brand-ink shadow-card ${c.bg}`}>
                 <h3 className="mt-1 text-2xl font-extrabold">{c.title}</h3>
                 <ul className="mt-4 space-y-3">
                   {c.items.map((i) => (
@@ -373,11 +371,10 @@ function Index() {
             ))}
           </div>
           <p className="mx-auto mt-10 max-w-3xl text-center text-xl font-semibold">
-            שני הצדדים צודקים, ושניכם תקועים באותו מעגל — וזה לא אומר שמשהו שבור, רק שיש משהו אחד
-            שעדיין לא הבנתם.
+            שניכם אולי מנסים להגיע לפתרון, אבל הדרך שבה אתם מגיבים זה לזה מחזירה אתכם שוב לאותו מקום. כשמבינים את המעגל הזה, אפשר להתחיל לשנות את הדרך שבה מנהלים את המחלוקת.
           </p>
           <div className="mt-8 text-center">
-            <CTA variant="pink">שריינו מקום למפגש ללא עלות ←</CTA>
+            <CTA variant="pink">שריינו לי מקום במפגש ללא עלות ←</CTA>
           </div>
         </div>
       </section>
@@ -406,7 +403,7 @@ function Index() {
             כאשר מבינים את הדינמיקה שמניעה את המריבה, אפשר להתחיל לנהל אותה אחרת.
           </p>
           <div className="mt-8">
-            <CTA variant="pink">שריינו מקום למפגש ללא עלות ←</CTA>
+            <CTA variant="pink">שריינו לי מקום במפגש ללא עלות ←</CTA>
           </div>
         </div>
       </section>
@@ -532,7 +529,7 @@ function Index() {
               </p>
             </div>
             <div className="mt-8">
-              <CTA>שריינו מקום למפגש ללא עלות ←</CTA>
+              <CTA>שריינו לי מקום במפגש ללא עלות ←</CTA>
             </div>
           </div>
         </div>
@@ -556,7 +553,7 @@ function Index() {
             className="mt-10 md:mt-12"
           />
           <div className="mt-10 text-center">
-            <CTA>שריינו מקום למפגש ללא עלות ←</CTA>
+            <CTA>שריינו לי מקום במפגש ללא עלות ←</CTA>
           </div>
         </div>
       </section>
@@ -639,7 +636,7 @@ function Index() {
             </ul>
           </div>
           <div className="mt-8">
-            <CTA variant="pink">שריינו מקום למפגש ללא עלות ←</CTA>
+            <CTA variant="pink">שריינו לי מקום במפגש ללא עלות ←</CTA>
           </div>
         </div>
       </section>
