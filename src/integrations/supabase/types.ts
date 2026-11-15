@@ -21,6 +21,7 @@ export type Database = {
           email: string | null
           full_name: string
           id: string
+          marketing_consent: boolean
           phone: string | null
           source: string | null
         }
@@ -30,6 +31,7 @@ export type Database = {
           email?: string | null
           full_name: string
           id?: string
+          marketing_consent?: boolean
           phone?: string | null
           source?: string | null
         }
@@ -39,6 +41,7 @@ export type Database = {
           email?: string | null
           full_name?: string
           id?: string
+          marketing_consent?: boolean
           phone?: string | null
           source?: string | null
         }

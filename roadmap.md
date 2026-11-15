@@ -1,4 +1,5 @@
 # Requested fixes
+- [x] Split operational/marketing consent, add default-false storage, test both choices and verify 375px/1280px without publishing.
 - [x] Replace only testimonial asset pointers 13–18 after visual comparison; verify 375px/1280px rendering, spotlight and build without publishing.
 - [x] Replace only testimonial asset pointers 7–12 after visual comparison; verify 375px/1280px rendering, spotlight and build without publishing.
 - [x] Replace only the hero asset pointer with the visually verified compressed JPEG; retain import and crop, verify 375px/768px/1280px without publishing.

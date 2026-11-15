@@ -1,0 +1,1 @@
+ALTER TABLE public.webinar_registrations ADD COLUMN marketing_consent boolean NOT NULL DEFAULT false;

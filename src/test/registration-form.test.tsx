@@ -7,11 +7,12 @@ vi.mock("@/integrations/supabase/client", () => ({ supabase: { from: () => ({ in
 
 import { RegistrationForm } from "@/components/landing/RegistrationForm";
 
-function submitRegistration(source?: string | null) {
+function submitRegistration(source?: string | null, marketingConsent = false) {
   render(<RegistrationForm source={source ?? null} />);
   fireEvent.change(screen.getByLabelText("שם מלא *"), { target: { value: "בדיקת הרשמה" } });
   fireEvent.change(screen.getByLabelText("טלפון נייד *"), { target: { value: "0500000000" } });
-  fireEvent.click(screen.getByRole("checkbox"));
+  fireEvent.click(screen.getByRole("checkbox", { name: /אני מאשר\/ת את עיבוד/ }));
+  if (marketingConsent) fireEvent.click(screen.getByRole("checkbox", { name: /אני מעוניין\/ת לקבל/ }));
   fireEvent.click(screen.getByRole("button"));
 }
 
@@ -23,7 +24,7 @@ describe("Registration success navigation", () => {
     insert.mockResolvedValue({ error: null });
     submitRegistration();
     await waitFor(() => expect(navigate).toHaveBeenCalledWith({ to: "/thank-you" }));
-    expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: "0500000000", email: null, consent: true, source: null });
+    expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: "0500000000", email: null, consent: true, marketing_consent: false, source: null });
     const saveOrder = insert.mock.invocationCallOrder[0];
     const navigationOrder = navigate.mock.invocationCallOrder[0];
     if (saveOrder === undefined || navigationOrder === undefined) throw new Error("Missing save or navigation call");
@@ -34,7 +35,7 @@ describe("Registration success navigation", () => {
     insert.mockResolvedValue({ error: null });
     submitRegistration("newsletter-test");
     await waitFor(() => expect(navigate).toHaveBeenCalledWith({ to: "/thank-you" }));
-    expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: "0500000000", email: null, consent: true, source: "newsletter-test" });
+    expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: "0500000000", email: null, consent: true, marketing_consent: false, source: "newsletter-test" });
   });
 
   it("does not navigate when saving fails", async () => {
@@ -49,6 +50,26 @@ describe("Registration success navigation", () => {
     insert.mockResolvedValue({ error: null });
     submitRegistration("quiz");
     await waitFor(() => expect(navigate).toHaveBeenCalledWith({ to: "/thank-you" }));
-    expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: "0500000000", email: null, consent: true, source: "quiz" });
+    expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: "0500000000", email: null, consent: true, marketing_consent: false, source: "quiz" });
+  });
+  it("starts both consents unchecked and blocks submission with marketing consent alone", () => {
+    render(<RegistrationForm />);
+    const operational = screen.getByRole("checkbox", { name: /אני מאשר\/ת את עיבוד/ });
+    const marketing = screen.getByRole("checkbox", { name: /אני מעוניין\/ת לקבל/ });
+    expect(operational).not.toBeChecked();
+    expect(marketing).not.toBeChecked();
+    expect(operational).toBeRequired();
+    expect(marketing).not.toBeRequired();
+    fireEvent.click(marketing);
+    expect(screen.getByRole("button")).toBeDisabled();
+    fireEvent.submit(screen.getByRole("button").closest("form") as HTMLFormElement);
+    expect(insert).not.toHaveBeenCalled();
+  });
+
+  it("saves an explicit marketing opt-in without changing operational consent", async () => {
+    insert.mockResolvedValue({ error: null });
+    submitRegistration(null, true);
+    await waitFor(() => expect(navigate).toHaveBeenCalledWith({ to: "/thank-you" }));
+    expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: "0500000000", email: null, consent: true, marketing_consent: true, source: null });
   });
 });

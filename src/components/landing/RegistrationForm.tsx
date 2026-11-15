@@ -17,13 +17,14 @@ const schema = z.object({
     .optional()
     .or(z.literal("")),
   consent: z.literal(true, { errorMap: () => ({ message: "יש לאשר כדי להירשם" }) }),
+  marketing_consent: z.boolean().default(false),
 });
 
 type Errors = Partial<Record<"full_name" | "phone" | "email" | "consent" | "form", string>>;
 
 export function RegistrationForm({ source = null }: { source?: string | null }) {
   const navigate = useNavigate();
-  const [values, setValues] = useState({ full_name: "", phone: "", email: "", consent: false });
+  const [values, setValues] = useState({ full_name: "", phone: "", email: "", consent: false, marketing_consent: false });
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "sending">("idle");
 
@@ -43,6 +44,7 @@ export function RegistrationForm({ source = null }: { source?: string | null }) 
       phone: parsed.data.phone,
       email: parsed.data.email ? parsed.data.email : null,
       consent: true,
+      marketing_consent: parsed.data.marketing_consent,
       source,
     });
     if (error) {
@@ -105,19 +107,31 @@ export function RegistrationForm({ source = null }: { source?: string | null }) 
         />
         {errors.email && <p className="mt-1 text-sm text-destructive">{errors.email}</p>}
       </div>
+      <div className="space-y-3">
       <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed">
         <input
           type="checkbox"
+          required
           className="mt-1 size-5 shrink-0 accent-brand-blue"
           checked={values.consent}
           onChange={(e) => setValues({ ...values, consent: e.target.checked })}
         />
         <span>
-          אני מאשר/ת קבלת תכנים, עדכונים והזמנות נוספות במייל ו/או בוואטסאפ מיובל סודאי, לרבות
-          אישור וקישור למפגש ותזכורות. ניתן להסיר את עצמי בכל עת. אישור זה נדרש לצורך ההרשמה,
-          בהתאם לחוק הגנת הפרטיות, התשמ"א-1981.
+          אני מאשר/ת את עיבוד הפרטים שמסרתי (שם, טלפון, דוא״ל) לצורך ההרשמה למפגש, שליחת אישור הרשמה, קישור להתחברות ותזכורות בנוגע למפגש.
         </span>
       </label>
+      <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed">
+        <input
+          type="checkbox"
+          className="mt-1 size-5 shrink-0 accent-brand-blue"
+          checked={values.marketing_consent}
+          onChange={(e) => setValues({ ...values, marketing_consent: e.target.checked })}
+        />
+        <span>
+          אני מעוניין/ת לקבל גם תכנים, עדכונים והזמנות נוספות למפגשים/סדנאות במייל ו/או בוואטסאפ מיובל סודאי. ניתן להסיר את עצמי בכל עת.
+        </span>
+      </label>
+      </div>
       {errors.consent && <p className="-mt-3 text-sm text-destructive">{errors.consent}</p>}
       {errors.form && <p className="text-sm text-destructive">{errors.form}</p>}
       <button

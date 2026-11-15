@@ -30,6 +30,7 @@ use the editor.
 <!-- LOVABLE:END -->
 
 - Webinar signups insert directly from the browser into `webinar_registrations` (anon insert-only RLS, DB CHECKs validate); no one can read rows from the app — keeps leads private.
+- Store operational and marketing consent as separate registration fields, validating the former independently of the latter so optional marketing opt-in never blocks registration.
 - Keep the thank-you page independent of the campaign route module; navigate there only after a successful registration insert so the campaign page stays unchanged.
 - Validate campaign ref search state in the campaign route and pass it to the registration form as an optional source; attribution belongs to the current visit, not persistent browser storage.
 - Keep relationship-quiz questions and scoring in a browser-safe pure module, with answers held only in page state; this makes scoring testable without collecting sensitive relationship responses.
