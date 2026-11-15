@@ -669,19 +669,6 @@ function Index() {
         </div>
       </section>
 
-      {/* 13. פוטר */}
-      <footer className="border-t border-border px-5 pb-32 pt-8 text-center text-sm text-brand-clay">
-        <div className="mx-auto max-w-4xl">
-          <p className="font-semibold text-brand-blue">© יובל סודאי — פסיכותרפיה, ייעוץ זוגי ושיטת המפה הזוגית</p>
-          <nav aria-label="פרטי קשר" className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6">
-            <a href="mailto:office@yuvalsudai.com" className="break-words underline-offset-4 hover:text-brand-blue hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"><bdi>office@yuvalsudai.com</bdi></a>
-            <a href="tel:0534524138" className="underline-offset-4 hover:text-brand-blue hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"><bdi>053-452-4138</bdi></a>
-            <a href="https://yuvalsudai.com" target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:text-brand-blue hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"><bdi>yuvalsudai.com</bdi></a>
-          </nav>
-          <p className="mt-6">עיצוב ובניית הדף: טובי קבלן</p>
-        </div>
-      </footer>
-
       {/* 14. וואטסאפ צף — שמאל */}
       <a
         href={WHATSAPP_URL}
