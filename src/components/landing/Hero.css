@@ -3,6 +3,37 @@
   --hero-text-shadow: 0 2px 12px var(--brand-blue-deep);
   --hero-light: radial-gradient(circle, var(--card) 0%, var(--on-dark) 18%, transparent 70%);
   --hero-badge-shadow: 0 4px 20px color-mix(in oklch, var(--brand-blue-deep) 25%, transparent);
+  --hero-exit-gradient: linear-gradient(to bottom, var(--brand-blue-deep), var(--brand-blue));
+}
+
+.campaign-hero::after,
+.campaign-hero + section::after {
+  content: "";
+  display: block;
+  height: 96px;
+  pointer-events: none;
+}
+
+.campaign-hero::after {
+  background: var(--hero-exit-gradient);
+}
+
+/* The existing blue identification section sits between hero and cream. */
+.campaign-hero + section {
+  --hero-cream-gradient: linear-gradient(to bottom, var(--brand-blue), var(--brand-cream));
+  padding-bottom: 0;
+}
+
+.campaign-hero + section::after {
+  margin: 90px -1.25rem 0;
+  background: var(--hero-cream-gradient);
+}
+
+@media (min-width: 640px) {
+  .campaign-hero::after,
+  .campaign-hero + section::after {
+    height: 144px;
+  }
 }
 
 .campaign-hero__visual {

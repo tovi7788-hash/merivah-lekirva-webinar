@@ -34,3 +34,7 @@
 # Mobile persistent controls
 - [x] Reproduce text overlaps during a whole-page 375px scroll and capture before evidence.
 - [x] Reduce mobile controls and reserve viewport space; verify 158 whole-page scroll positions, all six CTAs, guide/WhatsApp links, FAQ and desktop preservation; capture mobile screenshots.
+
+# Hero color transition and controls recheck
+- [x] Recheck both persistent controls throughout 85 real wheel-scroll steps at 375px: no text occlusion or mutual overlap, controls remain 48px.
+- [x] Smooth the dark hero into the existing blue section, and that section into the cream background; preserve text and capture mobile/desktop evidence.
