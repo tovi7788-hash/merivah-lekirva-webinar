@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Flower } from "@/components/landing/Flower";
 import { RegistrationForm } from "@/components/landing/RegistrationForm";
+import { ChromaGrid } from "@/components/landing/ChromaGrid";
 import { Button } from "@/components/ui/button";
 import yuvalPhoto from "@/assets/yuval-workshop.jpeg.asset.json";
 import heroBg from "@/assets/hero-bg.jpg.asset.json";
@@ -583,7 +584,19 @@ function Index() {
       <section className="px-5 py-20">
         <div className="mx-auto max-w-5xl">
           <SectionTitle>עומק מקצועי, הסברים בהירים ותובנות שנשארות</SectionTitle>
-          <TestimonialsGallery />
+          <ChromaGrid
+            items={TESTIMONIALS.map((t, i) => ({
+              image: t.url,
+              accent: i % 2 === 0 ? "#3F5B6E" : "#F5B8B8",
+              alt: `צילום מסך עדות ${i + 1} על יובל סודאי`,
+            }))}
+            theme="light"
+            columns={3}
+            aspectRatio="9 / 16"
+            showInfo={false}
+            reveal="spotlight"
+            className="mt-10 md:mt-12"
+          />
           <div className="mt-10 text-center">
             <CTA>שריינו מקום למפגש ללא עלות ←</CTA>
           </div>

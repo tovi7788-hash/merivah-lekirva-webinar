@@ -1,4 +1,5 @@
 # Requested fixes
+- [x] Replace section 7 with the supplied ChromaGrid, change only the registration submit label, and verify 375px/1280px rendering and regression tests.
 - [x] Replace the testimonials accordion with a three-card desktop / one-card mobile carousel, preserving phone frames and entrance animation.
 - [x] Verify testimonial paging, mobile swipe, reduced motion and whole-page overflow in the browser.
 - [x] Add nullable registration source storage.

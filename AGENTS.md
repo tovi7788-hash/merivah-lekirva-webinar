@@ -34,4 +34,4 @@ use the editor.
 - Validate campaign ref search state in the campaign route and pass it to the registration form as an optional source; attribution belongs to the current visit, not persistent browser storage.
 - Keep relationship-quiz questions and scoring in a browser-safe pure module, with answers held only in page state; this makes scoring testable without collecting sensitive relationship responses.
 - Reuse RegistrationForm for quiz signups with a fixed source, independently of the campaign route; this preserves one registration validation and success-navigation path.
-- Keep testimonial navigation in an RTL Embla carousel with responsive grouped snaps and decorative PhoneFrame children; this separates navigation from the one-time entrance animation and makes image additions automatic.
+- Render testimonials with the standalone ChromaGrid TSX/CSS component using the existing asset list; keeping the supplied interaction logic isolated prevents changes to other landing sections.
