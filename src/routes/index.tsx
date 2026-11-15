@@ -7,7 +7,8 @@ import { RegistrationForm } from "@/components/landing/RegistrationForm";
 import { ChromaGrid } from "@/components/landing/ChromaGrid";
 import { Button } from "@/components/ui/button";
 import yuvalPhoto from "@/assets/yuval-workshop.jpeg.asset.json";
-import heroBg from "@/assets/hero-bg.jpg.asset.json";
+import heroConflictDolls from "@/assets/hero-conflict-dolls.png.asset.json";
+import "@/components/landing/Hero.css";
 import yuvalLogo from "@/assets/yuval-logo.png.asset.json";
 import testimonial7 from "@/assets/testimonial-new-7.png.asset.json";
 import testimonial8 from "@/assets/testimonial-new-8.png.asset.json";
@@ -43,9 +44,8 @@ export const Route = createFileRoute("/")({
         content: "איך להפוך מריבה להזדמנות לחיזוק הקשר? מפגש חי עם יובל סודאי, 90 דקות בזום, ללא עלות. יום רביעי 18.11.2026 בשעה 20:30.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: heroBg.url },
+      ...(heroConflictDolls.url.startsWith("https://") ? [{ property: "og:image", content: heroConflictDolls.url }, { name: "twitter:image", content: heroConflictDolls.url }] : []),
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: heroBg.url },
     ],
   }),
   component: Index,
@@ -274,83 +274,56 @@ function Index() {
   const { ref } = Route.useSearch();
   return (
     <div className="overflow-x-clip">
-      {/* 1. HERO — viewport-tall, one dramatic statement */}
-      <section className="relative isolate flex items-center justify-center overflow-hidden">
-        <img
-          src={heroBg.url}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-x-0 -top-[280px] h-full w-full object-cover object-top"
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(255,251,245,0) 30%, rgba(255,251,245,.92) 54%, var(--brand-cream) 66%)",
-          }}
-        />
-        <div className="relative z-10 mx-auto w-full max-w-3xl px-5 pb-[18px] pt-[12px] text-center sm:pt-[32px]">
-          <img
-            src={yuvalLogo.url}
-            alt="יובל סודאי — פסיכותרפיסט ויועץ זוגי מוסמך"
-            className="mx-auto h-24 w-auto sm:h-28"
-          />
-          <p className="mt-[12px] mb-[18px] inline-block rounded-full border-[3px] border-brand-blue bg-brand-pink/30 px-8 py-4 text-[20px] font-extrabold leading-[1.4] text-brand-blue sm:text-[22px]">
-            יום רביעי 18.11.2026 <span className="text-brand-pink">·</span> 20:30{" "}
-            <span className="text-brand-pink">·</span> בזום, מהבית
-          </p>
-          <p className="mb-[2px] text-balance text-[16px] font-semibold leading-[1.4] text-brand-clay sm:text-[17px]">יובל סודאי מזמין אתכם לשידור יישומי בנושא:</p>
-          <h1 className="font-display-tight mb-[8px] text-[110px] leading-[1.15] sm:text-[160px]">
-            ממריבה{" "}
-            <span className="relative inline-block text-brand-pink">
-              לקרבה
-              <svg
-                viewBox="-4 -3 208 18"
-                preserveAspectRatio="none"
-                className="absolute -bottom-[8px] left-0 h-[12px] w-full"
-                aria-hidden="true"
-              >
-                <path
-                  d="M2 9C40 5 80 2 120 6C150 9 175 5 198 8"
-                  fill="none"
-                  stroke="var(--brand-blue)"
-                  strokeWidth={8}
-                  strokeLinecap="round"
-                  className="animate-draw"
-                />
-              </svg>
-            </span>
-          </h1>
-          <p className="mx-auto mb-[20px] max-w-xl text-balance text-[22px] font-semibold leading-[1.35] sm:mb-[26px] sm:text-[27px]">
+      {/* 1. HERO */}
+      <div className="campaign-hero bg-brand-blue-deep text-center text-on-dark" dir="rtl">
+        <section aria-label="ממריבה לקרבה" className="campaign-hero__visual">
+          <img src={heroConflictDolls.url} alt="שני זוגות לבבות מאוירים: ממריבה ודאגה לקרבה וחיבור" className="campaign-hero__image" fetchPriority="high" />
+          <div className="campaign-hero__badge">
+            <img src={yuvalLogo.url} alt="יובל סודאי — פסיכותרפיסט ויועץ זוגי מוסמך" />
+          </div>
+          <div className="campaign-hero__light-track" aria-hidden="true"><span className="campaign-hero__light" /></div>
+          <div className="campaign-hero__title-block">
+            <p className="campaign-hero__eyebrow">שידור חינמי בזום</p>
+            <h1 className="campaign-hero__title font-display-tight">
+              ממריבה{" "}
+              <span className="relative inline-block text-brand-pink">
+                לקרבה
+                <svg viewBox="-4 -3 208 18" preserveAspectRatio="none" className="absolute -bottom-2 left-0 h-3 w-full" aria-hidden="true">
+                  <path d="M2 9C40 5 80 2 120 6C150 9 175 5 198 8" fill="none" stroke="var(--brand-cream)" strokeWidth={5} strokeLinecap="round" className="animate-draw" />
+                </svg>
+              </span>
+            </h1>
+          </div>
+        </section>
+
+        {/* 1b. פרטי המפגש וההזמנה להרשמה */}
+        <section className="mx-auto max-w-3xl px-5 pb-12 pt-7 sm:pb-16 sm:pt-9">
+          <h2 className="mx-auto max-w-2xl text-balance text-2xl font-bold leading-snug text-brand-cream sm:text-3xl">
             איך להפוך מריבה להזדמנות לחיזוק הקשר?
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-on-dark/90 sm:text-lg">
+            שניכם רוצים שיהיה טוב בבית, שניכם משתדלים, ובכל זאת לפעמים ויכוח קטן הופך למריבה ארוכה שמשאירה את שניכם מתוסכלים.
           </p>
-          <div className="mx-auto max-w-[650px]">
-            <blockquote className="mx-auto mb-[18px] max-w-[625px] text-[17px] font-normal leading-[1.5] text-foreground sm:text-[19px]">
-              "שניכם רוצים שיהיה טוב בבית, שניכם משתדלים, ובכל זאת לפעמים ויכוח קטן הופך למריבה ארוכה שמשאירה את שניכם מתוסכלים."
-            </blockquote>
-            <p className="mb-[20px] text-[16px] font-semibold leading-[1.55] sm:mb-[24px] sm:text-[18px]">
+          <div className="mt-7 rounded-lg border border-on-dark/15 bg-card/7 p-5 sm:p-7">
+            <p className="text-base font-semibold leading-relaxed sm:text-lg">
               ב-90 דקות תלמדו איך להפחית את עוצמת המריבות ואת המשכן, להציב גבולות ולשמור על קווים אדומים, להבין ולהעביר מסרים בצורה נכונה – ולהפוך גם רגעים של מחלוקת להזדמנות לצמיחה ולחיזוק הקשר.
             </p>
+            <ul className="mt-5 flex flex-wrap justify-center gap-2 border-t border-dashed border-on-dark/20 pt-5 text-sm font-bold sm:text-base">
+              {["יום רביעי 18.11.2026", "20:30", "מפגש חי בזום", "ללא עלות"].map((detail) => (
+                <li key={detail} className="rounded-full bg-muted px-4 py-2 text-brand-blue-deep">{detail}</li>
+              ))}
+            </ul>
           </div>
-          <div className="flex justify-center">
-            <Button asChild className="h-[56px] w-full max-w-[360px] rounded-full bg-brand-blue px-3 text-[17px] font-bold text-primary-foreground shadow-soft hover:bg-brand-blue-deep hover:shadow-card sm:w-auto sm:px-8 sm:text-[18px]">
+          <div className="mt-7 flex justify-center">
+            <Button asChild className="h-auto min-h-14 w-full max-w-md whitespace-normal rounded-full bg-brand-pink px-5 py-4 text-base font-bold text-brand-blue-deep shadow-soft hover:bg-brand-pink-soft hover:shadow-card sm:w-auto sm:px-10 sm:text-lg">
               <a href="#register" onClick={scrollToForm}>שריינו מקום למפגש ללא עלות ←</a>
             </Button>
           </div>
-          <p className="mx-auto mt-[12px] max-w-xl text-[17px] leading-[30px] text-brand-clay">
-            מגיעים ביחד? זה כפול. מגיע/ה לבד? זו כבר התחלה אמיתית.
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-on-dark/75">
+            מומלץ להגיע יחד, אבל אפשר בהחלט להצטרף גם לבד.
           </p>
-        </div>
-      </section>
-
-      {/* 1b. calm supporting copy that used to live inside the hero */}
-      <section className="px-5 pb-16 text-center">
-        <div className="mx-auto max-w-2xl">
-          <p className="mx-auto inline-block max-w-xl rounded-2xl border border-brand-pink px-5 py-3 font-semibold text-brand-blue">
-            💎 מפגש ששני בני הזוג יכולים להשתתף בו ולתרגל יחד בזמן אמת — בדיסקרטיות מוחלטת
-          </p>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* 2. הזדהות */}
       <section className="bg-brand-blue px-5 py-20 text-on-dark">

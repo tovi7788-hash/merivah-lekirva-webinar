@@ -1,0 +1,113 @@
+.campaign-hero {
+  --hero-eyebrow: color-mix(in oklch, var(--brand-pink) 82%, var(--brand-clay));
+  --hero-text-shadow: 0 2px 12px var(--brand-blue-deep);
+  --hero-light: radial-gradient(circle, var(--card) 0%, var(--on-dark) 18%, transparent 70%);
+  --hero-badge-shadow: 0 4px 20px color-mix(in oklch, var(--brand-blue-deep) 25%, transparent);
+}
+
+.campaign-hero__visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.campaign-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaign-hero__badge {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 32px);
+  border-radius: 16px;
+  padding: 10px 20px;
+  background: var(--card);
+  box-shadow: var(--hero-badge-shadow);
+  z-index: 2;
+}
+
+.campaign-hero__badge img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+
+.campaign-hero__title-block {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  padding: 0 12px 12px;
+  text-shadow: var(--hero-text-shadow);
+  z-index: 2;
+}
+
+.campaign-hero__eyebrow {
+  color: var(--hero-eyebrow);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.campaign-hero__title {
+  font-size: 128px;
+  line-height: 1;
+  color: var(--brand-cream);
+}
+
+.campaign-hero__light-track {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.campaign-hero__light {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--hero-light);
+  filter: blur(2px);
+  offset-path: shape(from 67% 50%, curve to 20% 56% with 52% 43% / 45% 72%);
+  offset-rotate: 0deg;
+  animation: campaign-hero-light 3.2s linear infinite;
+}
+
+@keyframes campaign-hero-light {
+  0% { offset-distance: 0%; opacity: 0; }
+  12% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .campaign-hero__title { font-size: 96px; }
+}
+
+@media (max-width: 600px) {
+  .campaign-hero__visual { aspect-ratio: 4 / 3; }
+  .campaign-hero__image {
+    object-position: 84% 50%;
+    transform: scale(1.55);
+    transform-origin: 84% 50%;
+  }
+  .campaign-hero__title { font-size: 64px; }
+  .campaign-hero__light-track {
+    width: 177.7778%;
+    left: -65.3333%;
+    transform: scale(1.55);
+    transform-origin: 84% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .campaign-hero__light { display: none; animation: none; }
+}
