@@ -374,7 +374,7 @@ function Index() {
               },
               {
                 tag: "הצד שלו",
-                bg: "bg-brand-sky-soft",
+                bg: "bg-brand-cream",
                 title: "מה קורה כשהוא מרגיש שכל הזמן דורשים ממנו?",
                 items: [
                   "מה שלא תעשה, זה אף פעם לא מספיק",
