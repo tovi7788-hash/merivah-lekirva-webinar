@@ -96,23 +96,21 @@ function ThankYou() {
               הצטרפו לקבוצת הוואטסאפ ←
             </a>
           </Button>
-          {/* TODO: להחליף בקישור האמיתי לרשימת התפוצה */}
           <Button
             asChild
             variant="outline"
             className="btn-pill h-auto px-5 py-2.5 text-sm text-brand-blue hover:bg-brand-cream"
           >
-            <a href="#">
+            <a href="https://lev-good.github.io/Subscribe-to-the-Yuval-Sudai-newsletter/" target="_blank" rel="noopener noreferrer">
               הצטרפו לרשימת התפוצה במייל ←
             </a>
           </Button>
-          {/* TODO: להחליף בקישור האמיתי לערוץ היוטיוב */}
           <Button
             asChild
             variant="outline"
             className="btn-pill h-auto px-5 py-2.5 text-sm text-brand-blue hover:bg-brand-cream"
           >
-            <a href="#">
+            <a href="https://www.youtube.com/channel/UCfHMlvKDkMKrEh-obzm78cw" target="_blank" rel="noopener noreferrer">
               עקבו ביוטיוב ←
             </a>
           </Button>
