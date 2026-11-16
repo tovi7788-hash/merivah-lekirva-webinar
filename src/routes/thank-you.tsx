@@ -85,17 +85,17 @@ function ThankYou() {
             הצטרפו לקבוצת הוואטסאפ של יובל ←
           </a>
         </Button>
-        {/* שורת קישורים משנית — outline, פחות בולטת מה-CTA הראשיים */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5">
-          <Button
-            asChild
-            variant="outline"
-            className="btn-pill h-auto px-5 py-2.5 text-sm text-brand-blue hover:bg-brand-cream"
-          >
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              הצטרפו לקבוצת הוואטסאפ ←
-            </a>
-          </Button>
+        {/* WhatsApp — הכפתור הראשי בשורה: solid ובולט, מעל הקישורים המשניים */}
+        <Button
+          asChild
+          className="btn-pill mt-8 h-auto w-full max-w-md whitespace-normal bg-whatsapp-deep px-8 py-5 text-lg font-bold text-on-dark shadow-card hover:brightness-95"
+        >
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            הצטרפו לקבוצת הוואטסאפ ←
+          </a>
+        </Button>
+        {/* קישורים משניים — outline, פחות בולטים */}
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-2.5">
           <Button
             asChild
             variant="outline"

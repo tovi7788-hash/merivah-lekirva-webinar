@@ -37,6 +37,7 @@
   --color-brand-ink: var(--brand-ink);
   --color-brand-clay: var(--brand-clay);
   --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-deep: var(--whatsapp-deep);
   --color-on-dark: var(--on-dark);
   --font-display: "Amatic SC", "Assistant", sans-serif;
   --font-sans: "Assistant", system-ui, sans-serif;
@@ -54,6 +55,7 @@
   --brand-ink: oklch(0.44 0.02 195);          /* #4B5A5A */
   --brand-clay: oklch(0.57 0.02 15);          /* #877878 */
   --whatsapp: oklch(0.72 0.17 150);
+  --whatsapp-deep: color-mix(in oklch, var(--whatsapp) 62%, black);
   --on-dark: oklch(0.98 0.008 75);
 
   --background: var(--brand-cream);
