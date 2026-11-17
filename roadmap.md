@@ -48,4 +48,4 @@
 - [x] Enlarge only section 8's main heading by 5px, keep every other text in that section at its original size, and verify 375px/1280px without publishing.
 
 # Landing page PDF
-- [ ] Convert the current landing page into an A4 portrait PDF and keep it at exports/landing-page-current.pdf in the project.
+- [x] Convert the current landing page into an A4 portrait PDF and keep it at exports/landing-page-current.pdf in the project.
