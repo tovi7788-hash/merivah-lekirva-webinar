@@ -1,3 +1,8 @@
+# Nava 17 November acquisition source
+- [x] Inspect live registration triggers and confirm exact ref preservation for Lovable and GitHub Pages callers.
+- [x] Add `influencer-nava-17-11` / `נאוה 17/11` to the existing Make WhatsApp and optional email-pool payloads without changing the legacy Nava/Raizy swap.
+- [x] Validate attribution and both payloads with a rolled-back registration; run regression checks and report any Make or deployment steps.
+
 # Requested fixes
 - [x] Verify and clean up the mobile hero illustration, logo and title without changing desktop; capture before/after at 375px.
 - [x] Split operational/marketing consent, add default-false storage, test both choices and verify 375px/1280px without publishing.

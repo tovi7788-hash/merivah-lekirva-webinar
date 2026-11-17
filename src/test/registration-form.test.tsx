@@ -38,6 +38,13 @@ describe("Registration success navigation", () => {
     expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: "0500000000", email: null, consent: true, marketing_consent: false, source: "newsletter-test" });
   });
 
+  it("preserves the exact Nava 17 November acquisition source", async () => {
+    insert.mockResolvedValue({ error: null });
+    submitRegistration("influencer-nava-17-11");
+    await waitFor(() => expect(navigate).toHaveBeenCalledWith({ to: "/thank-you" }));
+    expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: "0500000000", email: null, consent: true, marketing_consent: false, source: "influencer-nava-17-11" });
+  });
+
   it("does not navigate when saving fails", async () => {
     insert.mockResolvedValue({ error: { message: "Save failed" } });
     submitRegistration();
