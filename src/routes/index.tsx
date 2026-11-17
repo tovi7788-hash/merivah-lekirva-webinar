@@ -566,14 +566,26 @@ function Index() {
           <div className="relative mx-auto w-full max-w-72 md:max-w-80">
             <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-[2deg] rounded-2xl bg-on-dark/20" />
             <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rotate-[0deg] rounded-2xl bg-on-dark/35" />
-            <div className="relative flex aspect-[3/4] -rotate-[2.5deg] flex-col items-center justify-between rounded-2xl bg-brand-blue-deep p-6 text-center shadow-card ring-1 ring-on-dark/20">
-              <Flower size={76} variant="light" />
-              <div>
-                <p className="text-xs font-bold tracking-widest text-on-dark/70">מדריך אישי</p>
-                <p className="font-display-tight text-[6rem] leading-none text-brand-pink">5</p>
-                <p className="text-lg font-extrabold leading-snug text-on-dark">תובנות וכלים מעשיים</p>
-              </div>
-              <p className="text-xs text-on-dark/70">מאת יובל סודאי</p>
+            <div className="relative flex aspect-[3/4] -rotate-[2.5deg] flex-col items-center justify-between overflow-hidden rounded-2xl bg-brand-blue-deep p-5 text-center shadow-card ring-1 ring-on-dark/20">
+              <img
+                src={heroConflictDolls.url}
+                alt=""
+                className="absolute inset-0 size-full object-cover object-right"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-brand-blue-deep via-brand-blue-deep/85 to-transparent"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-0 bottom-0 h-[22%] bg-gradient-to-t from-brand-blue-deep via-brand-blue-deep/70 to-transparent"
+              />
+              <p className="relative font-display-tight text-4xl leading-tight text-on-dark">
+                הלב שמאחורי המילים
+              </p>
+              <p className="relative text-[0.78rem] font-bold leading-snug text-brand-pink">
+                המדריך להעמקת הקשר ולהבנה הדדית בבית
+              </p>
             </div>
           </div>
           <div className="text-center md:text-right">
@@ -581,18 +593,10 @@ function Index() {
               מתנה למי שיישאר איתנו עד סוף המפגש
             </h2>
             <h3 className="mt-6 text-2xl font-bold leading-snug text-brand-pink">
-              מדריך מתנה מאת יובל סודאי
+              הלב שמאחורי המילים
             </h3>
-            <div aria-hidden="true" className="mt-6 flex items-center justify-center gap-4 md:justify-start">
-              <span className="text-5xl font-light tabular-nums leading-none text-brand-pink">5</span>
-              <div className="flex gap-1.5 border-b border-brand-pink/40 pb-2">
-                {[1, 2, 3, 4, 5].map((n) => (
-                  <span key={n} className="h-5 w-1.5 rounded-sm bg-brand-pink/70" />
-                ))}
-              </div>
-            </div>
-            <p className="mt-5 text-lg text-on-dark/90">
-              תובנות וכלים מעשיים מעולמו המקצועי של יובל, שיאפשרו לכם להמשיך לקחת איתכם מהמפגש גם לאחר סיומו.
+            <p className="mt-6 text-lg text-on-dark/90">
+              תובנות וכלים מעשיים להעמקת הקשר ולהבנה הדדית, מעולמו המקצועי של יובל.
             </p>
             <p className="mt-6 border-t border-on-dark/20 pt-5 text-base font-semibold text-on-dark">
               המדריך יוענק למשתתפים שיישארו עד סוף המפגש.
