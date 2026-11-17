@@ -79,4 +79,18 @@ describe("Registration success navigation", () => {
     await waitFor(() => expect(navigate).toHaveBeenCalledWith({ to: "/thank-you" }));
     expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: "0500000000", email: null, consent: true, marketing_consent: true, source: null });
   });
+
+  it("youtube-yuval requires email, allows no phone and keeps the exact source", async () => {
+    insert.mockResolvedValue({ error: null });
+    render(<RegistrationForm source="youtube-yuval" />);
+    fireEvent.change(screen.getByLabelText("שם מלא *"), { target: { value: "בדיקת הרשמה" } });
+    fireEvent.click(screen.getByRole("checkbox", { name: /אני מאשר\/ת את עיבוד/ }));
+    fireEvent.click(screen.getByRole("button"));
+    expect(await screen.findByText("נא להזין כתובת דוא״ל תקינה")).toBeInTheDocument();
+    expect(insert).not.toHaveBeenCalled();
+    fireEvent.change(screen.getByLabelText("דוא״ל *"), { target: { value: "a@example.com" } });
+    fireEvent.click(screen.getByRole("button"));
+    await waitFor(() => expect(navigate).toHaveBeenCalledWith({ to: "/thank-you" }));
+    expect(insert).toHaveBeenCalledWith({ full_name: "בדיקת הרשמה", phone: null, email: "a@example.com", consent: true, marketing_consent: false, source: "youtube-yuval" });
+  });
 });

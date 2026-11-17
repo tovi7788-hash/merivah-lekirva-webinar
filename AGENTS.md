@@ -39,3 +39,4 @@ use the editor.
 - Scope campaign hero styles and motion to `.campaign-hero` in its own stylesheet so presentation changes never affect the remaining sections.
 - Keep the supplied BorderGlow logic and stylesheet isolated; wrap benefit articles without modifying their content or other campaign sections.
 - On small campaign viewports, reserve a separate bottom row for the persistent controls and scroll the content above it; document-end spacing alone cannot prevent mid-scroll text overlap. Keep this layout isolated in FloatingControls.css.
+- Email-first campaign sources (EMAIL_FIRST_SOURCES in RegistrationForm) require email and make phone optional; per-source rules stay in one form so validation and success navigation remain shared.

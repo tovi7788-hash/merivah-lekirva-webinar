@@ -20,17 +20,31 @@ const schema = z.object({
   marketing_consent: z.boolean().default(false),
 });
 
+// Sources whose audience registers by email: email required, phone optional.
+export const EMAIL_FIRST_SOURCES = new Set(["youtube-yuval"]);
+
+const emailFirstSchema = schema.extend({
+  phone: z
+    .string()
+    .trim()
+    .regex(/^[0-9+\-\s]{9,15}$/, "נא להזין מספר נייד תקין")
+    .optional()
+    .or(z.literal("")),
+  email: z.string().trim().max(255).email("נא להזין כתובת דוא״ל תקינה"),
+});
+
 type Errors = Partial<Record<"full_name" | "phone" | "email" | "consent" | "form", string>>;
 
 export function RegistrationForm({ source = null }: { source?: string | null }) {
   const navigate = useNavigate();
+  const emailFirst = source != null && EMAIL_FIRST_SOURCES.has(source);
   const [values, setValues] = useState({ full_name: "", phone: "", email: "", consent: false, marketing_consent: false });
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "sending">("idle");
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const parsed = schema.safeParse(values);
+    const parsed = (emailFirst ? emailFirstSchema : schema).safeParse(values);
     if (!parsed.success) {
       const errs: Errors = {};
       for (const issue of parsed.error.issues) errs[issue.path[0] as keyof Errors] = issue.message;
@@ -41,7 +55,7 @@ export function RegistrationForm({ source = null }: { source?: string | null }) 
     setStatus("sending");
     const { error } = await supabase.from("webinar_registrations").insert({
       full_name: parsed.data.full_name,
-      phone: parsed.data.phone,
+      phone: parsed.data.phone ? parsed.data.phone : null,
       email: parsed.data.email ? parsed.data.email : null,
       consent: true,
       marketing_consent: parsed.data.marketing_consent,
@@ -76,7 +90,11 @@ export function RegistrationForm({ source = null }: { source?: string | null }) 
       </div>
       <div>
         <label htmlFor="phone" className="mb-1.5 block font-semibold text-brand-blue">
-          טלפון נייד *
+          {emailFirst ? (
+            <>טלפון נייד <span className="font-normal text-brand-clay">(לא חובה)</span></>
+          ) : (
+            "טלפון נייד *"
+          )}
         </label>
         <input
           id="phone"
@@ -93,7 +111,7 @@ export function RegistrationForm({ source = null }: { source?: string | null }) 
       </div>
       <div>
         <label htmlFor="email" className="mb-1.5 block font-semibold text-brand-blue">
-          דוא״ל <span className="font-normal text-brand-clay">(לא חובה)</span>
+          {emailFirst ? "דוא״ל *" : <>דוא״ל <span className="font-normal text-brand-clay">(לא חובה)</span></>}
         </label>
         <input
           id="email"
