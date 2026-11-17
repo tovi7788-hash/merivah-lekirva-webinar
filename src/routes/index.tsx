@@ -590,7 +590,7 @@ function Index() {
             </div>
           </div>
           <div className="text-center md:text-right">
-            <h2 className="font-display-tight text-5xl text-on-dark sm:text-6xl">
+            <h2 className="font-display-tight text-[59px] text-on-dark sm:text-[72.5px]">
               מתנה למי שיישאר איתנו עד סוף המפגש
             </h2>
             <h3 className="mt-4 text-2xl font-bold leading-snug text-brand-pink">

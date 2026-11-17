@@ -43,3 +43,9 @@
 # Hero color transition and controls recheck
 - [x] Recheck both persistent controls throughout 85 real wheel-scroll steps at 375px: no text occlusion or mutual overlap, controls remain 48px.
 - [x] Smooth the dark hero into the existing blue section, and that section into the cream background; preserve text and capture mobile/desktop evidence.
+
+# Gift section heading size
+- [x] Enlarge only section 8's main heading by 5px, keep every other text in that section at its original size, and verify 375px/1280px without publishing.
+
+# Landing page PDF
+- [ ] Convert the current landing page into an A4 portrait PDF and keep it at exports/landing-page-current.pdf in the project.
