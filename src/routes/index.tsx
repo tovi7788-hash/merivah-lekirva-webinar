@@ -566,11 +566,11 @@ function Index() {
           <div className="relative mx-auto w-full max-w-72 md:max-w-80">
             <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-[2deg] rounded-2xl bg-on-dark/20" />
             <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rotate-[0deg] rounded-2xl bg-on-dark/35" />
-            <div className="relative flex aspect-[3/4] -rotate-[2.5deg] flex-col items-center justify-between overflow-hidden rounded-2xl bg-brand-blue-deep p-5 text-center shadow-card ring-1 ring-on-dark/20">
+            <div className="relative aspect-[3/4] -rotate-[2.5deg] overflow-hidden rounded-2xl bg-brand-blue-deep text-center shadow-card ring-1 ring-on-dark/20">
               <img
                 src={heroConflictDolls.url}
                 alt=""
-                className="absolute inset-0 size-full object-cover object-right"
+                className="absolute inset-0 size-full object-cover object-right -translate-y-[6%]"
               />
               <div
                 aria-hidden="true"
@@ -578,12 +578,13 @@ function Index() {
               />
               <div
                 aria-hidden="true"
-                className="absolute inset-x-0 bottom-0 h-[22%] bg-gradient-to-t from-brand-blue-deep via-brand-blue-deep/70 to-transparent"
+                className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-brand-blue-deep via-brand-blue-deep/70 to-transparent"
               />
-              <p className="relative font-display-tight text-4xl leading-tight text-on-dark">
-                הלב שמאחורי המילים
+              <p className="absolute inset-x-5 top-[5%] font-display-tight text-3xl leading-tight text-on-dark md:text-4xl">
+                <span className="block">הלב</span>
+                <span className="block">שמאחורי המילים</span>
               </p>
-              <p className="relative text-[0.78rem] font-bold leading-snug text-brand-pink">
+              <p className="absolute inset-x-5 bottom-[20%] text-balance text-[0.7rem] font-bold leading-snug text-brand-pink md:text-[0.78rem]">
                 המדריך להעמקת הקשר ולהבנה הדדית בבית
               </p>
             </div>
