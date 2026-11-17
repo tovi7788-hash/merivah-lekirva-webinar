@@ -592,11 +592,14 @@ function Index() {
             <h2 className="font-display-tight text-5xl text-on-dark sm:text-6xl">
               מתנה למי שיישאר איתנו עד סוף המפגש
             </h2>
-            <h3 className="mt-6 text-2xl font-bold leading-snug text-brand-pink">
+            <h3 className="mt-4 text-2xl font-bold leading-snug text-brand-pink">
               הלב שמאחורי המילים
             </h3>
-            <p className="mt-6 text-lg text-on-dark/90">
-              תובנות וכלים מעשיים להעמקת הקשר ולהבנה הדדית, מעולמו המקצועי של יובל.
+            <p className="mt-1 text-lg font-semibold text-on-dark/85">
+              המדריך להעמקת הקשר ולהבנה הדדית בבית
+            </p>
+            <p className="mt-5 text-lg text-on-dark/90">
+              תובנות וכלים מעשיים מעולמו המקצועי של יובל, שיאפשרו לכם להמשיך לקחת איתכם מהמפגש גם לאחר סיומו.
             </p>
             <p className="mt-6 border-t border-on-dark/20 pt-5 text-base font-semibold text-on-dark">
               המדריך יוענק למשתתפים שיישארו עד סוף המפגש.
