@@ -305,7 +305,6 @@ function Sales() {
               </article>
             ))}
           </div>
-          <p className="price-note mt-6">אפשרות לפריסה של עד 3 תשלומים.</p>
         </div>
       </section>
 
