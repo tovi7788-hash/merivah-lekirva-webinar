@@ -6,6 +6,9 @@ import heroImage from "@/assets/hero-conflict-dolls-dark.png.asset.json";
 import "./sales.css";
 
 const WA = "https://wa.me/972534524138?text=" + encodeURIComponent("אני רוצה להצטרף למסלול ממריבה לקרבה");
+// קישורי תשלום אמיתיים
+const PAY_COUPLE = "https://mrng.to/zjpRrldVPj";
+const PAY_SINGLE = "https://mrng.to/Z6tX2ZzTxo";
 // חצות 18.11.2026 שעון ישראל (UTC+2)
 const DEADLINE = Date.parse("2026-11-18T22:00:00Z");
 
@@ -61,13 +64,24 @@ function Countdown() {
   );
 }
 
-function Cta({ children, sub }: { children: ReactNode; sub?: ReactNode }) {
+function PayButton({ href, label, variant, full }: { href: string; label: string; variant: "primary" | "secondary"; full?: boolean }) {
   return (
-    <a href={WA} target="_blank" rel="noopener noreferrer"
-      className="cta-shadow inline-flex flex-col items-center rounded-full bg-primary px-10 py-5 text-lg font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:brightness-105 md:text-xl">
-      <span>{children}</span>
-      {sub && <span className="mt-1 text-sm font-medium opacity-80">{sub}</span>}
+    <a href={href} target="_blank" rel="noopener noreferrer"
+      className={`sales-cta sales-cta-${variant}${full ? " w-full" : ""}`}>
+      {label}
     </a>
+  );
+}
+
+function CtaPair({ sub }: { sub?: ReactNode }) {
+  return (
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+        <PayButton href={PAY_COUPLE} label="להצטרפות כזוג — 850 ₪ ←" variant="primary" />
+        <PayButton href={PAY_SINGLE} label="להצטרפות כיחיד — 650 ₪ ←" variant="secondary" />
+      </div>
+      {sub && <p className="text-sm font-medium text-muted-foreground">{sub}</p>}
+    </div>
   );
 }
 
@@ -99,6 +113,11 @@ const faqs = [
   ["מה מקבלים בסיום התהליך?", "לכל זוג נבנית מפה אישית של הדילמות החוזרות שלו, לצד הבנה מעמיקה יותר של הצרכים, הרצונות והנקודות שבהן נכון לחזק את הקשר."],
   ["עד מתי אפשר להצטרף במחיר המיוחד?", "עד יום רביעי, 18.11.2026, בשעה 24:00. לאחר מכן המחיר חוזר למחיר הרגיל."],
 ] as const;
+
+const priceOptions = [
+  { label: "לזוג", old: "2,600", now: "850", href: PAY_COUPLE, cta: "להצטרפות כזוג — 850 ₪ ←", variant: "primary" as const },
+  { label: "ליחיד", old: "2,400", now: "650", href: PAY_SINGLE, cta: "להצטרפות כיחיד — 650 ₪ ←", variant: "secondary" as const },
+];
 
 function SectionTitle({ children }: { children: ReactNode }) {
   return <h2 className="mb-8 text-3xl font-extrabold md:text-4xl">{children}</h2>;
@@ -147,7 +166,7 @@ function Sales() {
             </p>
             <div className="mt-4"><Countdown /></div>
           </div>
-          <div className="mt-10"><Cta>אני רוצה להצטרף למסלול ←</Cta></div>
+          <div className="mt-10"><CtaPair /></div>
         </div>
       </section>
 
@@ -235,16 +254,16 @@ function Sales() {
           <h2 className="mt-6 text-3xl font-extrabold md:text-5xl">ההזדמנות המיוחדת למשתתפי הוובינר</h2>
           <div className="mt-6"><Countdown /></div>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {[["לזוג", "2,600", "850"], ["ליחיד", "2,400", "650"]].map(([l, o, n]) => (
-              <div key={l} className="glow-card rounded-2xl p-8">
-                <p className="text-lg font-semibold text-muted-foreground">{l}</p>
-                <p className="mt-3 text-xl text-muted-foreground line-through">{o} ₪</p>
-                <p className="mt-1"><span className="text-6xl font-black text-primary">{n} ₪</span> <span className="text-muted-foreground">בלבד</span></p>
+            {priceOptions.map((o) => (
+              <div key={o.label} className="glow-card flex flex-col rounded-2xl p-8">
+                <p className="text-lg font-semibold text-muted-foreground">{o.label}</p>
+                <p className="mt-3 text-xl text-muted-foreground line-through">{o.old} ₪</p>
+                <p className="mt-1"><span className="text-6xl font-black text-primary">{o.now} ₪</span> <span className="text-muted-foreground">בלבד</span></p>
+                <div className="mt-6"><PayButton href={o.href} label={o.cta} variant={o.variant} full /></div>
               </div>
             ))}
           </div>
           <p className="mt-6 text-muted-foreground">אפשרות לפריסה של עד 3 תשלומים.</p>
-          <div className="mt-10"><Cta>אני רוצה להצטרף למסלול ←</Cta></div>
         </div>
       </section>
 
@@ -265,7 +284,7 @@ function Sales() {
         <p className="mt-6 text-lg leading-loose text-muted-foreground md:text-xl">
           אם אתם מרגישים שהמריבות חוזרות על עצמן, שהשיחות לא תמיד מובילות להבנה, או שאתם רוצים להכיר טוב יותר את מה שכל אחד מכם צריך מהקשר — המסלול הזה נבנה כדי לעזור לכם להתחיל לעשות את הדרך.
         </p>
-        <div className="mt-10"><Cta sub="850 ₪ לזוג | 650 ₪ ליחיד">בואו להצטרף למסלול ממריבה לקרבה</Cta></div>
+        <div className="mt-10"><CtaPair /></div>
         <p className="mt-4 text-sm font-semibold text-primary">ההטבה מסתיימת היום בחצות</p>
       </section>
 

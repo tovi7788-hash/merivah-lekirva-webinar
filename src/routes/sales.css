@@ -81,3 +81,54 @@
 .sales-theme .sales-band {
   background-color: var(--navy-deep);
 }
+
+/*
+ * Payment CTAs. Primary = couples (solid green, the app's whatsapp token).
+ * Secondary = single participant (transparent, green outline).
+ */
+.sales-theme .sales-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 1.1rem 2.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sales-theme .sales-cta:hover {
+  transform: translateY(-2px);
+}
+
+.sales-theme .sales-cta:focus-visible {
+  outline: 2px solid var(--whatsapp);
+  outline-offset: 3px;
+}
+
+.sales-theme .sales-cta-primary {
+  background-color: var(--whatsapp);
+  color: #06240f;
+  box-shadow: 0 12px 40px -12px color-mix(in oklab, var(--whatsapp) 75%, transparent);
+}
+
+.sales-theme .sales-cta-primary:hover {
+  filter: brightness(1.06);
+}
+
+.sales-theme .sales-cta-secondary {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid color-mix(in oklab, var(--whatsapp) 55%, transparent);
+}
+
+.sales-theme .sales-cta-secondary:hover {
+  border-color: var(--whatsapp);
+  background-color: color-mix(in oklab, var(--whatsapp) 12%, transparent);
+}
