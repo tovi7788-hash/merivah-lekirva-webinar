@@ -1,0 +1,83 @@
+/*
+ * Sales page (/sales) only.
+ *
+ * Every rule is scoped under .sales-theme, which is applied to the page's own
+ * wrapper element. The rest of the app (/, /quiz, /thank-you) never gets this
+ * class, so none of these values can reach it.
+ *
+ * The theme works because src/styles.css maps Tailwind color utilities through
+ * @theme inline to plain custom properties (--color-background: var(--background)
+ * and so on). Redefining those properties on the wrapper therefore re-skins the
+ * whole sales page, and nothing outside it.
+ */
+.sales-theme {
+  color-scheme: dark;
+
+  --background: #0d1a2e;
+  --navy-deep: #1e2d47;
+  --foreground: oklch(0.96 0.01 250);
+  --card: oklch(0.26 0.04 260 / 0.6);
+  --card-foreground: oklch(0.96 0.01 250);
+  --popover: #1e2d47;
+  --popover-foreground: oklch(0.96 0.01 250);
+  --primary: #e8927c;
+  --primary-foreground: #0d1a2e;
+  --secondary: #3b7a8c;
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: #1e2d47;
+  --muted-foreground: oklch(0.78 0.02 250);
+  --accent: #1e2d47;
+  --accent-foreground: oklch(0.96 0.01 250);
+  --border: color-mix(in oklab, #e8927c 15%, transparent);
+  --input: color-mix(in oklab, #e8927c 15%, transparent);
+  --ring: #e8927c;
+
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Heebo", system-ui, sans-serif;
+  text-align: right;
+}
+
+/* The app's base layer paints every heading in brand blue; on this dark page
+   that is too low-contrast, so headings inherit the page's own foreground. */
+.sales-theme h1,
+.sales-theme h2,
+.sales-theme h3 {
+  color: var(--foreground);
+}
+
+.sales-theme .glow-card {
+  background: linear-gradient(
+    160deg,
+    color-mix(in oklab, var(--navy-deep) 90%, transparent),
+    color-mix(in oklab, var(--background) 70%, transparent)
+  );
+  border: 1px solid var(--border);
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--secondary) 8%, transparent),
+    0 10px 40px -20px color-mix(in oklab, var(--primary) 35%, transparent);
+  transition:
+    box-shadow 0.3s,
+    border-color 0.3s;
+}
+
+.sales-theme .glow-card:hover {
+  border-color: color-mix(in oklab, var(--primary) 35%, transparent);
+  box-shadow: 0 0 30px -8px color-mix(in oklab, var(--primary) 35%, transparent);
+}
+
+.sales-theme .cta-shadow {
+  box-shadow: 0 12px 40px -12px color-mix(in oklab, var(--primary) 70%, transparent);
+}
+
+.sales-theme .heart-gradient {
+  background:
+    radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--primary) 70%, transparent), transparent 60%),
+    radial-gradient(circle at 70% 70%, color-mix(in oklab, var(--secondary) 80%, transparent), transparent 60%),
+    var(--navy-deep);
+}
+
+/* Full-bleed navy band; the shared theme has no navy-deep utility. */
+.sales-theme .sales-band {
+  background-color: var(--navy-deep);
+}

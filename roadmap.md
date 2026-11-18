@@ -49,3 +49,9 @@
 
 # Landing page PDF
 - [x] Convert the current landing page into an A4 portrait PDF and keep it at exports/landing-page-current.pdf in the project.
+
+# Sales page /sales
+- [x] Bring the sales page into this app as /sales without touching /, /quiz, /thank-you.
+- [x] Rename the method to "החקר הזוגי" everywhere on the sales page, keeping "מפה אישית של הדילמות".
+- [x] Lead Yuval's credential line with a bolded "פסיכותרפיסט", without acronym parentheses.
+- [x] Verify /sales at 1280px and 375px and confirm the main page is byte-identical.
