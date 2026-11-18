@@ -55,3 +55,4 @@
 - [x] Rename the method to "החקר הזוגי" everywhere on the sales page, keeping "מפה אישית של הדילמות".
 - [x] Lead Yuval's credential line with a bolded "פסיכותרפיסט", without acronym parentheses.
 - [x] Verify /sales at 1280px and 375px and confirm the main page is byte-identical.
+- [x] Redesign only the two pricing cards as a compact centered brand-palette group; preserve payment links and verify desktop/mobile contrast and layout.

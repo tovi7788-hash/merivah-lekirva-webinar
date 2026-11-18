@@ -115,8 +115,28 @@ const faqs = [
 ] as const;
 
 const priceOptions = [
-  { label: "לזוג", old: "2,600", now: "850", href: PAY_COUPLE, cta: "להצטרפות כזוג — 850 ₪ ←", variant: "primary" as const },
-  { label: "ליחיד", old: "2,400", now: "650", href: PAY_SINGLE, cta: "להצטרפות כיחיד — 650 ₪ ←", variant: "secondary" as const },
+  {
+    label: "לזוג",
+    program: "ממריבה לקרבה · מסלול זוגי",
+    old: "2,600",
+    now: "850",
+    saving: "1,750",
+    href: PAY_COUPLE,
+    cta: "להצטרפות כזוג — 850 ₪ ←",
+    variant: "primary" as const,
+    recommended: true,
+  },
+  {
+    label: "ליחיד",
+    program: "ממריבה לקרבה · מסלול אישי",
+    old: "2,400",
+    now: "650",
+    saving: "1,750",
+    href: PAY_SINGLE,
+    cta: "להצטרפות כיחיד — 650 ₪ ←",
+    variant: "secondary" as const,
+    recommended: false,
+  },
 ];
 
 function SectionTitle({ children }: { children: ReactNode }) {
@@ -246,24 +266,37 @@ function Sales() {
       </section>
 
       {/* PRICE */}
-      <section className="sales-band py-24">
-        <div className="mx-auto max-w-4xl px-6">
+      <section className="sales-band price-section py-24">
+        <div className="mx-auto max-w-4xl px-6 text-center">
           <span className="inline-block rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
             ההטבה תקפה עד היום, 18.11.2026, בחצות בלבד
           </span>
           <h2 className="mt-6 text-3xl font-extrabold md:text-5xl">ההזדמנות המיוחדת למשתתפי הוובינר</h2>
-          <div className="mt-6"><Countdown /></div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-6 flex justify-center"><Countdown /></div>
+          <div className="price-grid mx-auto mt-12 grid gap-6 md:grid-cols-2">
             {priceOptions.map((o) => (
-              <div key={o.label} className="glow-card flex flex-col rounded-2xl p-8">
-                <p className="text-lg font-semibold text-muted-foreground">{o.label}</p>
-                <p className="mt-3 text-xl text-muted-foreground line-through">{o.old} ₪</p>
-                <p className="mt-1"><span className="text-6xl font-black text-primary">{o.now} ₪</span> <span className="text-muted-foreground">בלבד</span></p>
-                <div className="mt-6"><PayButton href={o.href} label={o.cta} variant={o.variant} full /></div>
-              </div>
+              <article key={o.label} className={`price-card${o.recommended ? " price-card-featured" : ""}`}>
+                {o.recommended && <span className="price-badge">הכי נבחר</span>}
+                <p className="price-label">{o.label}</p>
+                <p className="price-amount" dir="ltr">
+                  <span className="price-number">{o.now}</span>
+                  <sup className="price-currency">₪</sup>
+                </p>
+                <p className="price-program">{o.program}</p>
+                <div className="price-meta">
+                  <p className="price-old">
+                    <span>במקום</span>
+                    <s>{o.old} ₪</s>
+                  </p>
+                  <p className="price-saving">חיסכון של {o.saving} ₪</p>
+                </div>
+                <div className="price-action">
+                  <PayButton href={o.href} label={o.cta} variant={o.variant} full />
+                </div>
+              </article>
             ))}
           </div>
-          <p className="mt-6 text-muted-foreground">אפשרות לפריסה של עד 3 תשלומים.</p>
+          <p className="price-note mt-6">אפשרות לפריסה של עד 3 תשלומים.</p>
         </div>
       </section>
 

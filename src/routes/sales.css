@@ -132,3 +132,213 @@
   border-color: var(--whatsapp);
   background-color: color-mix(in oklab, var(--whatsapp) 12%, transparent);
 }
+
+/* Pricing focal point: compact solid cards, brand salmon and petrol only. */
+.sales-theme .price-section {
+  --price-background: #070b12;
+  --price-card: #111923;
+  --price-card-featured: #151b25;
+  --price-cream: #f5efe6;
+  --price-muted: #aeb8c4;
+
+  background-color: var(--price-background);
+}
+
+.sales-theme .price-grid {
+  width: 100%;
+  max-width: 47rem;
+  justify-content: center;
+}
+
+.sales-theme .price-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 31rem;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid color-mix(in oklab, var(--price-cream) 13%, transparent);
+  border-radius: 1.25rem;
+  background-color: var(--price-card);
+  padding: 2rem 1.75rem 1.75rem;
+  color: var(--price-cream);
+  text-align: center;
+  box-shadow: 0 20px 50px -32px color-mix(in oklab, var(--price-cream) 20%, transparent);
+}
+
+.sales-theme .price-card-featured {
+  border-color: color-mix(in oklab, var(--primary) 28%, transparent);
+  background-color: var(--price-card-featured);
+  box-shadow:
+    0 -12px 42px -28px color-mix(in oklab, var(--primary) 65%, transparent),
+    0 24px 55px -34px color-mix(in oklab, var(--primary) 32%, transparent);
+}
+
+.sales-theme .price-card-featured::before {
+  position: absolute;
+  top: -1px;
+  right: 1.5rem;
+  left: 1.5rem;
+  height: 2px;
+  border-radius: 999px;
+  background-color: var(--primary);
+  box-shadow: 0 3px 18px color-mix(in oklab, var(--primary) 32%, transparent);
+  content: "";
+}
+
+.sales-theme .price-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid color-mix(in oklab, var(--primary) 38%, transparent);
+  border-radius: 999px;
+  background-color: color-mix(in oklab, var(--primary) 10%, transparent);
+  padding: 0.25rem 0.75rem;
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.sales-theme .price-label {
+  margin-top: 0.75rem;
+  color: var(--price-cream);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sales-theme .price-card:not(.price-card-featured) .price-label {
+  margin-top: 0;
+}
+
+.sales-theme .price-amount {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 1.25rem;
+  color: var(--price-cream);
+  font-variant-numeric: tabular-nums;
+  line-height: 0.9;
+}
+
+.sales-theme .price-card-featured .price-amount {
+  color: var(--primary);
+}
+
+.sales-theme .price-number {
+  font-size: clamp(4.75rem, 8vw, 6.5rem);
+  font-weight: 900;
+  letter-spacing: -0.055em;
+}
+
+.sales-theme .price-currency {
+  margin-top: 0.35rem;
+  margin-left: 0.35rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sales-theme .price-program {
+  margin-top: 1rem;
+  color: var(--price-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.sales-theme .price-meta {
+  width: 100%;
+  margin-top: 1.75rem;
+  border-top: 1px solid color-mix(in oklab, var(--price-cream) 10%, transparent);
+  padding-top: 1.25rem;
+}
+
+.sales-theme .price-old {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  color: var(--price-muted);
+  font-size: 0.9rem;
+}
+
+.sales-theme .price-old s {
+  color: var(--price-cream);
+  font-size: 1rem;
+  text-decoration-thickness: 1px;
+}
+
+.sales-theme .price-saving {
+  display: inline-flex;
+  margin-top: 0.75rem;
+  border-radius: 999px;
+  background-color: color-mix(in oklab, var(--secondary) 30%, transparent);
+  padding: 0.35rem 0.8rem;
+  color: var(--price-cream);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.sales-theme .price-action {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 1.75rem;
+}
+
+.sales-theme .price-card .sales-cta {
+  min-height: 3.5rem;
+  border-radius: 0.85rem;
+  padding: 0.95rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+.sales-theme .price-card .sales-cta-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 12px 32px -18px color-mix(in oklab, var(--primary) 70%, transparent);
+}
+
+.sales-theme .price-card .sales-cta-primary:hover {
+  filter: brightness(1.06);
+}
+
+.sales-theme .price-card .sales-cta-secondary {
+  border-color: color-mix(in oklab, var(--price-cream) 48%, transparent);
+  background-color: transparent;
+  color: var(--price-cream);
+  box-shadow: none;
+}
+
+.sales-theme .price-card .sales-cta-secondary:hover {
+  border-color: var(--price-cream);
+  background-color: color-mix(in oklab, var(--price-cream) 7%, transparent);
+}
+
+.sales-theme .price-card .sales-cta:focus-visible {
+  outline-color: var(--price-cream);
+}
+
+.sales-theme .price-note {
+  color: var(--price-muted);
+}
+
+@media (max-width: 639px) {
+  .sales-theme .price-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .sales-theme .price-grid {
+    max-width: 23rem;
+    gap: 1.25rem;
+  }
+
+  .sales-theme .price-card {
+    min-height: 0;
+    padding: 1.75rem 1.35rem 1.35rem;
+  }
+
+  .sales-theme .price-number {
+    font-size: 5rem;
+  }
+}
