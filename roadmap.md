@@ -56,3 +56,7 @@
 - [x] Lead Yuval's credential line with a bolded "פסיכותרפיסט", without acronym parentheses.
 - [x] Verify /sales at 1280px and 375px and confirm the main page is byte-identical.
 - [x] Redesign only the two pricing cards as a compact centered brand-palette group; preserve payment links and verify desktop/mobile contrast and layout.
+
+# Sales page bio rewrite
+- [x] Replace the whole "מי אני" / Yuval bio block (heading + all text) with the new copy: heading "לזוגיות יש שפה...", bolded "פסיכותרפיסט", 5 paragraphs, and the differentiating line "זהו הליווי הקבוצתי היחיד..." set apart in bold brand blue.
+- [x] Confirm no number of couples accompanied appears anywhere on the page; verify desktop/mobile, contrast and that /, /quiz, /thank-you are untouched.

@@ -240,12 +240,21 @@ function Sales() {
         <div className="glow-card grid items-center gap-10 rounded-3xl p-8 md:grid-cols-[220px_1fr] md:p-12">
           <div className="heart-gradient flex aspect-square items-center justify-center rounded-2xl text-2xl font-extrabold">יובל סודאי</div>
           <div>
-            <h2 className="text-3xl font-extrabold">יובל סודאי</h2>
-            <p className="mt-2 font-medium text-primary">
-              <strong className="font-extrabold">פסיכותרפיסט</strong> ומאמן זוגי, מעביר הרצאות וסדנאות בנושא זוגיות.
+            <h2 className="text-3xl font-extrabold">לזוגיות יש שפה. צריך ללמוד להקשיב לה.</h2>
+            <p className="mt-6 text-lg leading-loose text-muted-foreground">
+              יובל סודאי הוא <strong className="font-extrabold text-foreground">פסיכותרפיסט</strong> ומטפל זוגי מוסמך, בעל 16 שנות ניסיון בליווי זוגות.
             </p>
-            <p className="mt-5 text-lg leading-loose text-muted-foreground">
-              במשך 16 שנה יובל יושב מול זוגות, מקשיב לשפה שמתחת למילים ומלווה תהליכים זוגיים. את החקר הזוגי פיתח מתוך עבודה עם מאות זוגות. הייחודיות שלו היא בניסיון לאתר את שורש הקושי במדויק ובמהירות.
+            <p className="mt-4 text-lg leading-loose text-muted-foreground">
+              במהלך השנים חקר לעומק את הדינמיקה הזוגית ואת הדפוסים שמעצבים כל קשר, ומתוך הניסיון המצטבר פיתח דרך ייחודית לקרוא את השפה של כל זוג: להבין מה מניע את בני הזוג, מה עומד מאחורי התגובות שלהם וכיצד נוצרים מעגלי הריחוק והעימות.
+            </p>
+            <p className="mt-4 text-lg leading-loose text-muted-foreground">
+              בעבודתו משלב יובל כלים מעולמות הטיפול השונים, בהם CBT, EFT, IFS ושיטת 12 הצעדים, ומתאים אותם לצרכים הייחודיים שעולים בתהליך הליווי.
+            </p>
+            <p className="mt-4 text-lg leading-loose text-muted-foreground">
+              כך, במקום להסתפק בטיפים או בפתרונות אחידים, הוא מוביל תהליך שמחבר בין הבנה עמוקה של הקשר לבין כלים מעשיים ליישום בחיי היומיום — כדי להפוך נקודות חיכוך להזדמנויות להבנה, לחזק את החברות ולבנות קרבה מחודשת.
+            </p>
+            <p className="bio-lead mt-7 text-xl font-extrabold leading-relaxed md:text-2xl">
+              זהו הליווי הקבוצתי היחיד שבו שני בני הזוג משתתפים יחד.
             </p>
           </div>
         </div>

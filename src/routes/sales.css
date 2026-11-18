@@ -77,6 +77,12 @@
     var(--navy-deep);
 }
 
+/* The differentiating line in the bio: brand petrol blue, lifted with white so
+   it stays legible on the dark navy card. */
+.sales-theme .bio-lead {
+  color: color-mix(in oklab, var(--secondary) 62%, white);
+}
+
 /* Full-bleed navy band; the shared theme has no navy-deep utility. */
 .sales-theme .sales-band {
   background-color: var(--navy-deep);
