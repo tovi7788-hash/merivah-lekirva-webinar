@@ -10,6 +10,7 @@ declare global {
   }
 }
 
+// הוובינר של 18.11 הסתיים. להחליף בקישור ההרשמה לוובינר של 25.11 ואז להחזיר את הכפתור.
 const ZOOM_REGISTER_URL = "https://us06web.zoom.us/webinar/register/WN_yGDggiizS7S9jJhc3S7GwA";
 const WHATSAPP_URL = "https://chat.whatsapp.com/Kh9aZcX6IkRE6XYOl8tFf4";
 
@@ -72,14 +73,14 @@ function ThankYou() {
             </li>
           ))}
         </ul>
-        <p className="mt-10 max-w-xl text-base font-semibold leading-relaxed text-brand-blue sm:text-lg">
-          עוד צעד קטן אחד: השלימו הרשמה קצרה אצל זום (שם ומייל) ותקבלו מיד את קישור הכניסה האישי שלכם למפגש.
-        </p>
-        <Button asChild className="btn-pill mt-4 h-auto max-w-full whitespace-normal bg-brand-blue px-10 py-5 text-lg text-primary-foreground shadow-card hover:bg-brand-blue-deep">
-          <a href={ZOOM_REGISTER_URL} target="_blank" rel="noopener noreferrer">
-            להשלמת ההרשמה וקבלת קישור כניסה אישי ←
-          </a>
-        </Button>
+        <div className="mt-10 w-full max-w-xl rounded-2xl border border-border bg-card px-6 py-7 text-center shadow-soft">
+          <p className="text-lg font-bold leading-relaxed text-brand-blue sm:text-xl">
+            קישור הכניסה האישי שלך יישלח אליך בוואטסאפ ובמייל
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-brand-clay sm:text-base">
+            אין צורך לעשות שום דבר נוסף כרגע.
+          </p>
+        </div>
         <Button asChild className="btn-pill mt-4 h-auto max-w-full whitespace-normal bg-brand-pink text-brand-blue shadow-soft hover:bg-brand-pink hover:shadow-card">
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
             הצטרפו לקבוצת הוואטסאפ של יובל ←
