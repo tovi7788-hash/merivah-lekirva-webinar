@@ -17,9 +17,9 @@ export const Route = createFileRoute("/thank-you")({
   head: () => ({
     meta: [
       { title: "תודה שנרשמתם — ממריבה לקרבה עם יובל סודאי" },
-      { name: "description", content: "הרשמתכם לשידור ממריבה לקרבה התקבלה. נפגשים בזום ביום רביעי 18.11.2026 בשעה 20:30." },
+      { name: "description", content: "הרשמתכם לשידור ממריבה לקרבה התקבלה. נפגשים בזום ביום רביעי 25.11.2026 בשעה 20:30." },
       { property: "og:title", content: "תודה שנרשמתם — ממריבה לקרבה עם יובל סודאי" },
-      { property: "og:description", content: "נפגשים בזום ביום רביעי 18.11.2026 בשעה 20:30. הצטרפו לקבוצת הוואטסאפ של יובל." },
+      { property: "og:description", content: "נפגשים בזום ביום רביעי 25.11.2026 בשעה 20:30. הצטרפו לקבוצת הוואטסאפ של יובל." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -66,7 +66,7 @@ function ThankYou() {
           קיבלנו את הפרטים שלכם. לחצו למטה כדי להשלים את ההרשמה בזום — ותקבלו גם תזכורת לפני המועד בוואטסאפ.
         </p>
         <ul className="mt-8 flex flex-wrap justify-center gap-2.5 text-[0.95rem] font-semibold">
-          {["📅 יום רביעי | 18.11.2026 (ח׳ כסלו)", "🕣 בשעה 20:30", "💻 בזום, מהבית"].map((detail) => (
+          {["📅 יום רביעי | 25.11.2026 (ט״ו כסלו)", "🕣 בשעה 20:30", "💻 בזום, מהבית"].map((detail) => (
             <li key={detail} className="rounded-full border border-border bg-card px-4 py-2 text-brand-blue shadow-soft">
               {detail}
             </li>

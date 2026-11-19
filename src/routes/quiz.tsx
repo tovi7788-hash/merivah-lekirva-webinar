@@ -11,7 +11,7 @@ export const Route = createFileRoute("/quiz")({
   head: () => ({
     meta: [
       { title: "איפה הזוגיות שלכם ממש עומדת? — שאלון עם יובל סודאי" },
-      { name: "description", content: "חמש שאלות על הקשר שלכם, תובנה אישית והזמנה לשידור החינמי ממריבה לקרבה עם יובל סודאי, 18.11.2026 בשעה 20:30 בזום." },
+      { name: "description", content: "חמש שאלות על הקשר שלכם, תובנה אישית והזמנה לשידור החינמי ממריבה לקרבה עם יובל סודאי, 25.11.2026 בשעה 20:30 בזום." },
       { property: "og:title", content: "איפה הזוגיות שלכם ממש עומדת? — שאלון עם יובל סודאי" },
       { property: "og:description", content: "שאלון זוגיות קצר על תקשורת, נראות וחיבור, בדרך לממריבה לקרבה עם יובל סודאי." },
       { property: "og:type", content: "website" },
@@ -121,7 +121,7 @@ function RelationshipQuiz() {
                 <div><p className="font-semibold text-brand-clay">שידור עם יובל סודאי</p><h2 className="font-display-tight mt-1 text-5xl sm:text-6xl">ממריבה לקרבה</h2></div>
               </div>
               <p className="mt-6 text-lg leading-relaxed">איך אומרים את מה שחשוב לנו — ומרגישים אהובים? מפגש על המפה הזוגית, המעגל שביניכם והדרך לשמוע ולהשמיע.</p>
-              <ul className="mt-5 flex flex-wrap gap-3 text-base font-semibold text-brand-blue"><li>יום רביעי · 18.11.2026</li><li>20:30</li><li>בזום</li><li className="text-brand-clay">ללא עלות</li></ul>
+              <ul className="mt-5 flex flex-wrap gap-3 text-base font-semibold text-brand-blue"><li>יום רביעי · 25.11.2026</li><li>20:30</li><li>בזום</li><li className="text-brand-clay">ללא עלות</li></ul>
             </div>
             <h2 className="mb-5 text-center text-2xl font-bold">נפגשים בממריבה לקרבה</h2>
             <RegistrationForm source="quiz" />
