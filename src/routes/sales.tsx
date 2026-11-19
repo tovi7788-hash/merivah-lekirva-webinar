@@ -9,8 +9,8 @@ const WA = "https://wa.me/972534524138?text=" + encodeURIComponent("אני רו�
 // קישורי תשלום אמיתיים
 const PAY_COUPLE = "https://mrng.to/zjpRrldVPj";
 const PAY_SINGLE = "https://mrng.to/Z6tX2ZzTxo";
-// חצות 18.11.2026 שעון ישראל (UTC+2)
-const DEADLINE = Date.parse("2026-11-18T22:00:00Z");
+// חצות 25.11.2026 שעון ישראל (UTC+2)
+const DEADLINE = Date.parse("2026-11-25T22:00:00Z");
 
 export const Route = createFileRoute("/sales")({
   head: () => ({
@@ -111,7 +111,7 @@ const faqs = [
   ["האם זה מתאים גם למי שכבר ניסה ייעוץ זוגי?", "המסלול מציע דרך עבודה המבוססת על החקר הזוגי, שמבקשת לזהות את שורש הקושי ואת הצרכים שמאחורי הדילמות החוזרות, ולא להסתפק בעצות כלליות."],
   ["האם מדובר בקורס מוקלט?", "לא. מדובר בשישה מפגשים חיים, עם תרגילים, התבוננות וחיבור של התוכן לחיים שלכם."],
   ["מה מקבלים בסיום התהליך?", "לכל זוג נבנית מפה אישית של הדילמות החוזרות שלו, לצד הבנה מעמיקה יותר של הצרכים, הרצונות והנקודות שבהן נכון לחזק את הקשר."],
-  ["עד מתי אפשר להצטרף במחיר המיוחד?", "עד יום רביעי, 18.11.2026, בשעה 24:00. לאחר מכן המחיר חוזר למחיר הרגיל."],
+  ["עד מתי אפשר להצטרף במחיר המיוחד?", "עד יום רביעי, 25.11.2026, בשעה 24:00. לאחר מכן המחיר חוזר למחיר הרגיל."],
 ] as const;
 
 const priceOptions = [
@@ -178,7 +178,7 @@ function Sales() {
             </p>
           </div>
           <div className="glow-card mt-10 max-w-xl rounded-2xl p-6">
-            <p className="font-bold text-primary">🎯 מחיר מיוחד למשתתפי הוובינר עד היום ב-24:00</p>
+            <p className="font-bold text-primary">🎯 מחיר מיוחד למשתתפי המפגש — עד רביעי 25.11 בחצות</p>
             <p className="mt-2 text-lg">
               <b>850 ₪</b> לזוג <s className="text-muted-foreground">(במקום 2,600 ₪)</s>
               <span className="mx-2 text-muted-foreground">|</span>
@@ -278,7 +278,7 @@ function Sales() {
       <section className="sales-band price-section py-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <span className="inline-block rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
-            ההטבה תקפה עד היום, 18.11.2026, בחצות בלבד
+            ההטבה תקפה עד רביעי, 25.11.2026, בחצות בלבד
           </span>
           <h2 className="mt-6 text-3xl font-extrabold md:text-5xl">ההזדמנות המיוחדת למשתתפי הוובינר</h2>
           <div className="mt-6 flex justify-center"><Countdown /></div>
@@ -326,7 +326,7 @@ function Sales() {
           אם אתם מרגישים שהמריבות חוזרות על עצמן, שהשיחות לא תמיד מובילות להבנה, או שאתם רוצים להכיר טוב יותר את מה שכל אחד מכם צריך מהקשר — המסלול הזה נבנה כדי לעזור לכם להתחיל לעשות את הדרך.
         </p>
         <div className="mt-10"><CtaPair /></div>
-        <p className="mt-4 text-sm font-semibold text-primary">ההטבה מסתיימת היום בחצות</p>
+        <p className="mt-4 text-sm font-semibold text-primary">ההטבה מסתיימת ברביעי 25.11 בחצות</p>
       </section>
 
       {/* FAQ */}
