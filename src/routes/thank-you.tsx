@@ -66,6 +66,14 @@ function ThankYou() {
         <p className="mt-6 max-w-xl text-lg leading-relaxed sm:text-xl">
           קיבלנו את הפרטים שלכם. לחצו למטה כדי להשלים את ההרשמה בזום — ותקבלו גם תזכורת לפני המועד בוואטסאפ.
         </p>
+        <Button
+          asChild
+          className="btn-pill mt-6 h-auto w-full max-w-md whitespace-normal bg-brand-blue px-8 py-5 text-lg font-bold text-on-dark shadow-card hover:bg-brand-blue-deep"
+        >
+          <a href={ZOOM_REGISTER_URL} target="_blank" rel="noopener noreferrer">
+            השלימו את ההרשמה בזום ←
+          </a>
+        </Button>
         <ul className="mt-8 flex flex-wrap justify-center gap-2.5 text-[0.95rem] font-semibold">
           {["📅 יום רביעי | 25.11.2026 (ט״ו כסלו)", "🕣 בשעה 20:30", "💻 בזום, מהבית"].map((detail) => (
             <li key={detail} className="rounded-full border border-border bg-card px-4 py-2 text-brand-blue shadow-soft">

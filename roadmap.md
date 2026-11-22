@@ -67,3 +67,5 @@
 - [x] Rewrite the gift description in both places (card + text column) to the experiential copy, and rename the right floating button to "יש לנו משחק זוגי!" with its aria-label; verify no "מדריך" remains and no overlap at 1280px/375px.
 
 - 22/11: סקשן המתנה — טקסט חדש ארוך יותר ("חוויה זוגית אמיתית...") בשני המקומות; מרווחי מניפת הקלפים כויילו (מובייל 29/37, דסקטופ 30/36) כך שהטקסט לא נוגע בקלפים.
+
+- 22/11: דף התודה — הוחזר כפתור "השלימו את ההרשמה בזום ←" (brand-blue, טאב חדש, ZOOM_REGISTER_URL) אחרי פסקת הפתיחה ולפני תגי הפרטים.
