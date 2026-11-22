@@ -60,3 +60,7 @@
 # Sales page bio rewrite
 - [x] Replace the whole "מי אני" / Yuval bio block (heading + all text) with the new copy: heading "לזוגיות יש שפה...", bolded "פסיכותרפיסט", 5 paragraphs, and the differentiating line "זהו הליווי הקבוצתי היחיד..." set apart in bold brand blue.
 - [x] Confirm no number of couples accompanied appears anywhere on the page; verify desktop/mobile, contrast and that /, /quiz, /thank-you are untouched.
+
+# Gift section swap to קלפי הקרבה
+- [x] Replace only section 8's guide card with the "קלפי הקרבה" couples card deck: CSS card-fan mockup in brand tokens (no human figures, no image asset), same centered title+caption card structure, and the new eyebrow/heading/description copy.
+- [x] Add only the short hero gift line next to the date/details pills and verify no other section changed, no overlap at 1280px/375px, build and tests green.
