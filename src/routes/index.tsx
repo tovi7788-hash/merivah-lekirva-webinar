@@ -315,7 +315,7 @@ function Index() {
               כך תוכלו להפוך גם מחלוקת להזדמנות להבנה ולהתקדמות בקשר.
             </p>
             <ul className="mt-5 flex flex-wrap justify-center gap-2 border-t border-dashed border-on-dark/20 pt-5 text-sm font-bold sm:text-base">
-              {["יום רביעי 25.11.2026", "20:30", "מפגש חי בזום", "ללא עלות"].map((detail) => (
+              {["יום רביעי | ט״ו כסליו | 25.11.2026 | בזום | ללא עלות", "20:30"].map((detail) => (
                 <li key={detail} className="rounded-full bg-muted px-4 py-2 text-brand-blue-deep">{detail}</li>
               ))}
             </ul>
