@@ -89,11 +89,6 @@ function ThankYou() {
             אין צורך לעשות שום דבר נוסף כרגע.
           </p>
         </div>
-        <Button asChild className="btn-pill mt-4 h-auto max-w-full whitespace-normal bg-brand-pink text-brand-blue shadow-soft hover:bg-brand-pink hover:shadow-card">
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-            הצטרפו לקבוצת הוואטסאפ של יובל ←
-          </a>
-        </Button>
         {/* WhatsApp — הכפתור הראשי בשורה: solid ובולט, מעל הקישורים המשניים */}
         <Button
           asChild
@@ -108,7 +103,7 @@ function ThankYou() {
           <Button
             asChild
             variant="outline"
-            className="btn-pill h-auto px-5 py-2.5 text-sm text-brand-blue hover:bg-brand-cream"
+            className="btn-pill h-auto px-5 py-2.5 text-sm border-brand-pink text-brand-pink hover:bg-brand-pink-soft"
           >
             <a href="https://lev-good.github.io/Subscribe-to-the-Yuval-Sudai-newsletter/" target="_blank" rel="noopener noreferrer">
               הצטרפו לרשימת התפוצה במייל ←
