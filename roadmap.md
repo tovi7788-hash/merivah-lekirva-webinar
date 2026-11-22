@@ -65,3 +65,5 @@
 - [x] Replace only section 8's guide card with the "קלפי הקרבה" couples card deck: CSS card-fan mockup in brand tokens (no human figures, no image asset), same centered title+caption card structure, and the new eyebrow/heading/description copy.
 - [x] Add only the short hero gift line next to the date/details pills and verify no other section changed, no overlap at 1280px/375px, build and tests green.
 - [x] Rewrite the gift description in both places (card + text column) to the experiential copy, and rename the right floating button to "יש לנו משחק זוגי!" with its aria-label; verify no "מדריך" remains and no overlap at 1280px/375px.
+
+- 22/11: סקשן המתנה — טקסט חדש ארוך יותר ("חוויה זוגית אמיתית...") בשני המקומות; מרווחי מניפת הקלפים כויילו (מובייל 29/37, דסקטופ 30/36) כך שהטקסט לא נוגע בקלפים.

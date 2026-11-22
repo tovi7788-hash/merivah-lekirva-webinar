@@ -595,12 +595,12 @@ function Index() {
                 <span className="block">קלפי</span>
                 <span className="block">הקרבה</span>
               </p>
-              <div className="absolute inset-x-0 top-[28%] bottom-[32%]">
+              <div className="absolute inset-x-0 top-[29%] bottom-[37%] md:top-[30%] md:bottom-[36%]">
                 <CardDeckMockup />
               </div>
               <p className="absolute inset-x-4 bottom-[9%] text-balance text-[0.62rem] font-bold leading-snug md:text-[0.72rem]">
-                <span className="text-brand-pink">מערבבים, שולפים קלף, קוראים בקול — ומדברים.</span>{" "}
-                <span className="text-on-dark/85">18 דילמות ועקרונות זוגיים אמיתיים שהופכות לשיחה פתוחה בין בני זוג. שווי 200 ₪, הערב במתנה.</span>
+                <span className="text-brand-pink">חוויה זוגית אמיתית לחיבור בין בני הזוג — לא עוד רשימת טיפים.</span>{" "}
+                <span className="text-on-dark/85">מערבבים, שולפים קלף, קוראים בקול — ומדברים. 18 דילמות ועקרונות זוגיים אמיתיים שהופכות לשיחה פתוחה, ומשאירות חשק להמשיך. שווי 200 ₪, הערב במתנה.</span>
               </p>
             </div>
           </div>
@@ -612,7 +612,7 @@ function Index() {
               קלפי הקרבה
             </h2>
             <p className="mt-4 text-lg font-semibold leading-relaxed text-on-dark/90 sm:text-xl">
-              מערבבים, שולפים קלף, קוראים בקול — ומדברים. 18 דילמות ועקרונות זוגיים אמיתיים שהופכות לשיחה פתוחה בין בני זוג. <span className="whitespace-nowrap">שווי 200 ₪, הערב במתנה.</span>
+              חוויה זוגית אמיתית לחיבור בין בני הזוג — לא עוד רשימת טיפים. מערבבים, שולפים קלף, קוראים בקול — ומדברים. 18 דילמות ועקרונות זוגיים אמיתיים שהופכות לשיחה פתוחה, ומשאירות חשק להמשיך. <span className="whitespace-nowrap">שווי 200 ₪, הערב במתנה.</span>
             </p>
           </div>
         </div>
