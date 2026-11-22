@@ -10,8 +10,8 @@ declare global {
   }
 }
 
-// הוובינר של 18.11 הסתיים. להחליף בקישור ההרשמה לוובינר של 25.11 ואז להחזיר את הכפתור.
-const ZOOM_REGISTER_URL = "https://us06web.zoom.us/webinar/register/WN_yGDggiizS7S9jJhc3S7GwA";
+// קישור הכניסה למפגש בזום — 25.11.2026, 20:30 שעון ירושלים.
+const ZOOM_JOIN_URL = "https://us06web.zoom.us/j/89800626621?pwd=bvbSOinLetfZhNI8x8wxVf4ws2CTdl.1";
 const WHATSAPP_URL = "https://chat.whatsapp.com/Kh9aZcX6IkRE6XYOl8tFf4";
 
 export const Route = createFileRoute("/thank-you")({
@@ -64,14 +64,14 @@ function ThankYou() {
         />
         <h1 className="font-display-tight text-5xl sm:text-7xl">איזה יופי שנרשמתם! 🎉</h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed sm:text-xl">
-          קיבלנו את הפרטים שלכם. לחצו למטה כדי להשלים את ההרשמה בזום — ותקבלו גם תזכורת לפני המועד בוואטסאפ.
+          קיבלנו את הפרטים שלכם. שמרו את קישור הכניסה למטה — זה הקישור למפגש.
         </p>
         <Button
           asChild
           className="btn-pill mt-6 h-auto w-full max-w-md whitespace-normal bg-brand-blue px-8 py-5 text-lg font-bold text-on-dark shadow-card hover:bg-brand-blue-deep"
         >
-          <a href={ZOOM_REGISTER_URL} target="_blank" rel="noopener noreferrer">
-            השלימו את ההרשמה בזום ←
+          <a href={ZOOM_JOIN_URL} target="_blank" rel="noopener noreferrer">
+            כניסה למפגש בזום ←
           </a>
         </Button>
         <ul className="mt-8 flex flex-wrap justify-center gap-2.5 text-[0.95rem] font-semibold">
@@ -83,10 +83,10 @@ function ThankYou() {
         </ul>
         <div className="mt-10 w-full max-w-xl rounded-2xl border border-border bg-card px-6 py-7 text-center shadow-soft">
           <p className="text-lg font-bold leading-relaxed text-brand-blue sm:text-xl">
-            קישור הכניסה האישי שלך יישלח אליך בוואטסאפ ובמייל
+            שמרו את הקישור וייכנסו אליו ביום רביעי 25.11.2026 בשעה 20:30, שעון ירושלים
           </p>
           <p className="mt-2 text-sm leading-relaxed text-brand-clay sm:text-base">
-            אין צורך לעשות שום דבר נוסף כרגע.
+            כדאי לשמור את הקישור ביומן או בוואטסאפ כדי למצוא אותו בקלות במועד.
           </p>
         </div>
         {/* WhatsApp — הכפתור הראשי בשורה: solid ובולט, מעל הקישורים המשניים */}
