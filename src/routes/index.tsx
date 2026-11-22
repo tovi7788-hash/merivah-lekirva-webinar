@@ -717,13 +717,13 @@ function Index() {
       <a
         href="#register"
         onClick={scrollToForm}
-        aria-label="יש לנו משחק זוגי! להרשמה"
+        aria-label="יש לנו משחק זוגי כיפי! להרשמה"
         className="animate-float-delayed fixed bottom-4 right-4 z-40 flex items-center gap-2 rounded-full bg-card p-1.5 pe-1.5 shadow-card sm:pe-4"
       >
         <span className="flex size-12 items-center justify-center rounded-full bg-brand-blue">
           <Flower size={34} variant="light" />
         </span>
-        <span className="hidden text-sm font-bold text-brand-blue sm:inline">יש לנו משחק זוגי!</span>
+        <span className="hidden text-sm font-bold text-brand-blue sm:inline">יש לנו משחק זוגי כיפי!</span>
       </a>
       </div>
     </div>
