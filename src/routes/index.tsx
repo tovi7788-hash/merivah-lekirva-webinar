@@ -595,14 +595,12 @@ function Index() {
                 <span className="block">קלפי</span>
                 <span className="block">הקרבה</span>
               </p>
-              <div className="absolute inset-x-0 top-[28%] bottom-[28%]">
+              <div className="absolute inset-x-0 top-[28%] bottom-[32%]">
                 <CardDeckMockup />
               </div>
-              <p className="absolute inset-x-4 bottom-[15%] text-balance text-[0.7rem] font-bold leading-snug text-brand-pink md:text-[0.78rem]">
-                18 דילמות ועקרונות זוגיים אמיתיים
-              </p>
-              <p className="absolute inset-x-4 bottom-[8%] text-[0.62rem] font-bold leading-snug text-on-dark/80 md:text-[0.68rem]">
-                שווי 200 ₪ · במתנה
+              <p className="absolute inset-x-4 bottom-[9%] text-balance text-[0.62rem] font-bold leading-snug md:text-[0.72rem]">
+                <span className="text-brand-pink">מערבבים, שולפים קלף, קוראים בקול — ומדברים.</span>{" "}
+                <span className="text-on-dark/85">18 דילמות ועקרונות זוגיים אמיתיים שהופכות לשיחה פתוחה בין בני זוג. שווי 200 ₪, הערב במתנה.</span>
               </p>
             </div>
           </div>
@@ -614,7 +612,7 @@ function Index() {
               קלפי הקרבה
             </h2>
             <p className="mt-4 text-lg font-semibold leading-relaxed text-on-dark/90 sm:text-xl">
-              18 דילמות ועקרונות זוגיים אמיתיים, לשיחה פתוחה בין בני זוג — <span className="whitespace-nowrap">שווי 200 ₪, במתנה</span>
+              מערבבים, שולפים קלף, קוראים בקול — ומדברים. 18 דילמות ועקרונות זוגיים אמיתיים שהופכות לשיחה פתוחה בין בני זוג. <span className="whitespace-nowrap">שווי 200 ₪, הערב במתנה.</span>
             </p>
           </div>
         </div>
@@ -715,17 +713,17 @@ function Index() {
         </span>
       </a>
 
-      {/* 15. מדריך צף — ימין */}
+      {/* 15. משחק זוגי צף — ימין */}
       <a
         href="#register"
         onClick={scrollToForm}
-        aria-label="יש לנו מדריך! להרשמה"
+        aria-label="יש לנו משחק זוגי! להרשמה"
         className="animate-float-delayed fixed bottom-4 right-4 z-40 flex items-center gap-2 rounded-full bg-card p-1.5 pe-1.5 shadow-card sm:pe-4"
       >
         <span className="flex size-12 items-center justify-center rounded-full bg-brand-blue">
           <Flower size={34} variant="light" />
         </span>
-        <span className="hidden text-sm font-bold text-brand-blue sm:inline">יש לנו מדריך!</span>
+        <span className="hidden text-sm font-bold text-brand-blue sm:inline">יש לנו משחק זוגי!</span>
       </a>
       </div>
     </div>
