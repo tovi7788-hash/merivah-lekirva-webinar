@@ -30,6 +30,7 @@
   --color-brand-blue: var(--brand-blue);
   --color-brand-blue-deep: var(--brand-blue-deep);
   --color-brand-pink: var(--brand-pink);
+  --color-brand-pink-deep: var(--brand-pink-deep);
   --color-brand-pink-soft: var(--brand-pink-soft);
   --color-brand-sage: var(--brand-sage);
   --color-brand-sky-soft: var(--brand-sky-soft);
@@ -48,6 +49,7 @@
   --brand-blue: oklch(0.44 0.045 236);        /* #3F5B6E */
   --brand-blue-deep: oklch(0.38 0.04 236);    /* #2F4555 */
   --brand-pink: oklch(0.83 0.065 18);         /* #F5B8B8 */
+  --brand-pink-deep: oklch(0.52 0.16 18);     /* #B23645 — deep rose, 5.85:1 on cream */
   --brand-pink-soft: oklch(0.95 0.025 18);
   --brand-sage: oklch(0.88 0.04 163);         /* #C3E1D2 */
   --brand-sky-soft: oklch(0.94 0.02 230);
