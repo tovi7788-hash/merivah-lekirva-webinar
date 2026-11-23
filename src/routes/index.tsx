@@ -672,28 +672,29 @@ function Index() {
             הדף לא נטען אצלכם? אפשר גם ישירות: מייל ל-<a href="mailto:office@yuvalsudai.com" className="break-words underline-offset-4 hover:underline">office@yuvalsudai.com</a>,{" "}
             <a href="https://wa.me/972534524138" className="underline-offset-4 hover:underline">וואטסאפ</a>/<a href="tel:0534524138" className="underline-offset-4 hover:underline">טלפון <bdi>053-452-4138</bdi></a>
           </p>
-          <div className="mt-6 text-center text-sm text-brand-clay">
-            <a
-              href="https://yuvalsudai.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-bold text-brand-blue underline-offset-4 hover:underline"
-            >
-              בקרו גם באתר של יובל סודאי: yuvalsudai.com
-            </a>
-            <p className="mt-2">© כל הזכויות שמורות</p>
-            <hr className="mx-auto my-4 w-24 border-border" />
-            <a
-              href="https://tovikablan.co.il"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline-offset-4 hover:underline"
-            >
-              Tovi Kablan - אסטרטגיה, ניהול קמפיין, עיצוב ופיתוח
-            </a>
-          </div>
         </div>
       </section>
+
+      <footer className="border-t border-border px-5 py-8 text-center text-sm text-brand-clay">
+        <a
+          href="https://yuvalsudai.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-brand-blue underline-offset-4 hover:underline"
+        >
+          בקרו גם באתר של יובל סודאי: yuvalsudai.com
+        </a>
+        <p className="mt-2">© כל הזכויות שמורות</p>
+        <hr className="mx-auto my-4 w-24 border-border" />
+        <a
+          href="https://tovikablan.co.il"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline-offset-4 hover:underline"
+        >
+          Tovi Kablan - אסטרטגיה, ניהול קמפיין, עיצוב ופיתוח
+        </a>
+      </footer>
 
       </div>
       <div className="campaign-floating-controls">

@@ -73,3 +73,7 @@
 - 22/11: דף התודה — הוסרת כפתור הוואטסאפ הוורוד (נשאר הירוק בלבד); כפתור רשימת התפוצה עבר למסגרת+טקסט ורודים עם hover ורוד-בהיר.
 
 - 22/11: טוקן חדש brand-pink-deep (#B23645) + כפתור רשימת התפוצה בדף התודה עבר לטקסט ורוד עמוק — ניגודיות 5.82:1.
+
+# Footer credit strips
+- [x] Move the existing landing-page credits into a full-width footer matching the thank-you page.
+- [x] Add the exact Tovi Kablan credit link as a full-width strip at the bottom of the sales page; leave the gift-game wording unchanged.

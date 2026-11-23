@@ -351,6 +351,16 @@ function Sales() {
             <a href="tel:0534524138" className="font-semibold text-foreground" dir="ltr">053-452-4138</a>
           </p>
         </div>
+        <div className="mt-8 border-t border-border px-6 pt-6 text-center text-sm text-muted-foreground">
+          <a
+            href="https://tovikablan.co.il"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline-offset-4 hover:underline"
+          >
+            Tovi Kablan - אסטרטגיה, ניהול קמפיין, עיצוב ופיתוח
+          </a>
+        </div>
       </footer>
     </div>
   );
