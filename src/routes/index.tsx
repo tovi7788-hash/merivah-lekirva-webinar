@@ -341,7 +341,7 @@ function Index() {
               ))}
             </ul>
             <p className="mt-4 rounded-full bg-brand-pink-soft px-4 py-2 text-center text-sm font-bold leading-relaxed text-brand-blue-deep sm:text-base">
-              🎁 מי שנשאר עד הסוף מקבל במתנה את "קלפי הקרבה" (שווי 200 ₪)
+              🎁 מתנה בלעדית למשתתפי הוובינר: משחק הקלפים הזוגי "קלפי הקרבה", בשווי 200 ₪
             </p>
           </div>
           <div className="mt-7 flex justify-center">
@@ -606,7 +606,7 @@ function Index() {
           </div>
           <div className="text-center md:text-right">
             <p className="text-sm font-bold leading-relaxed text-brand-pink sm:text-base">
-              🎁 מתנה למשתתפים שנשארים עד סוף המפגש
+              🎁 מתנה בלעדית למשתתפי הוובינר
             </p>
             <h2 className="mt-3 font-display-tight text-[59px] text-on-dark sm:text-[72.5px]">
               קלפי הקרבה
